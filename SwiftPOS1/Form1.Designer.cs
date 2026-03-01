@@ -346,14 +346,14 @@
             this.siticonePictureBox1.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("siticonePictureBox1.Images")));
             this.siticonePictureBox1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             this.siticonePictureBox1.IsCircular = false;
-            this.siticonePictureBox1.Location = new System.Drawing.Point(143, 125);
+            this.siticonePictureBox1.Location = new System.Drawing.Point(148, 125);
             this.siticonePictureBox1.MaintainAspectRatio = true;
             this.siticonePictureBox1.Name = "siticonePictureBox1";
             this.siticonePictureBox1.PlaceholderImage = null;
             this.siticonePictureBox1.RotationAngle = 0F;
             this.siticonePictureBox1.Saturation = 1F;
             this.siticonePictureBox1.ShowBorder = true;
-            this.siticonePictureBox1.Size = new System.Drawing.Size(162, 156);
+            this.siticonePictureBox1.Size = new System.Drawing.Size(159, 159);
             this.siticonePictureBox1.SizeMode = SiticoneNetFrameworkUI.Helpers.Enum.SiticonePictureBoxSizeMode.StretchImage;
             this.siticonePictureBox1.TabIndex = 3;
             this.siticonePictureBox1.Text = "siticonePictureBox1";
