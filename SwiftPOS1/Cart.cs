@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace SwiftPOS1
 {
-    public partial class Analytics : Form
+    public partial class Cart : Form
     {
-        public Analytics()
+        public Cart()
         {
             InitializeComponent();
         }
-        private void siticoneButton2_Click(object sender, EventArgs e)
+
+        private void btnMenu_Click(object sender, EventArgs e)
         {
             Menu menu = new Menu();
             menu.Show();
