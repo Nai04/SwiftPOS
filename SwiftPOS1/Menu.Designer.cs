@@ -170,6 +170,7 @@
             this.btnCart.TooltipText = null;
             this.btnCart.UseAdvancedRendering = true;
             this.btnCart.UseParticles = false;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // btnLogout
             // 
@@ -721,6 +722,7 @@
             this.btnFruitTea.TooltipText = null;
             this.btnFruitTea.UseAdvancedRendering = true;
             this.btnFruitTea.UseParticles = false;
+            this.btnFruitTea.Click += new System.EventHandler(this.btnFruitTea_Click);
             // 
             // btnRiceMeal
             // 
@@ -797,6 +799,7 @@
             this.btnRiceMeal.TooltipText = null;
             this.btnRiceMeal.UseAdvancedRendering = true;
             this.btnRiceMeal.UseParticles = false;
+            this.btnRiceMeal.Click += new System.EventHandler(this.btnRiceMeal_Click);
             // 
             // btnPastry
             // 
@@ -873,6 +876,7 @@
             this.btnPastry.TooltipText = null;
             this.btnPastry.UseAdvancedRendering = true;
             this.btnPastry.UseParticles = false;
+            this.btnPastry.Click += new System.EventHandler(this.btnPastry_Click);
             // 
             // btnSnacksPasta
             // 

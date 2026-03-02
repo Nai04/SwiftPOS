@@ -201,6 +201,7 @@
             this.btnCart.TooltipText = null;
             this.btnCart.UseAdvancedRendering = true;
             this.btnCart.UseParticles = false;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // btnLogout
             // 
@@ -673,6 +674,7 @@
             this.btnPastry.TooltipText = null;
             this.btnPastry.UseAdvancedRendering = true;
             this.btnPastry.UseParticles = false;
+            this.btnPastry.Click += new System.EventHandler(this.btnPastry_Click);
             // 
             // btnRiceMeal
             // 
@@ -749,6 +751,7 @@
             this.btnRiceMeal.TooltipText = null;
             this.btnRiceMeal.UseAdvancedRendering = true;
             this.btnRiceMeal.UseParticles = false;
+            this.btnRiceMeal.Click += new System.EventHandler(this.btnRiceMeal_Click);
             // 
             // btnFruitTea
             // 
@@ -825,6 +828,7 @@
             this.btnFruitTea.TooltipText = null;
             this.btnFruitTea.UseAdvancedRendering = true;
             this.btnFruitTea.UseParticles = false;
+            this.btnFruitTea.Click += new System.EventHandler(this.btnFruitTea_Click);
             // 
             // btnMilktea
             // 
@@ -1027,7 +1031,7 @@
             this.siticoneLabel6.Name = "siticoneLabel6";
             this.siticoneLabel6.Size = new System.Drawing.Size(112, 23);
             this.siticoneLabel6.TabIndex = 29;
-            this.siticoneLabel6.Text = "Hokaido";
+            this.siticoneLabel6.Text = "Hokkaido";
             // 
             // siticoneLabel7
             // 

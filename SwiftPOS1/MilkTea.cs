@@ -184,5 +184,33 @@ namespace SwiftPOS1
 
             MessageBox.Show("Matcha (" + size + ") added to cart!");
         }
+
+        private void btnFruitTea_Click(object sender, EventArgs e)
+        {
+            FruitTea fruitTea = new FruitTea();
+            fruitTea.Show();
+            this.Hide();
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            Cart cart = new Cart();
+            cart.Show();
+            this.Hide();
+        }
+
+        private void btnRiceMeal_Click(object sender, EventArgs e)
+        {
+            Rice_Meal rice_Meal = new Rice_Meal();
+            rice_Meal.Show();
+            this.Hide();
+        }
+
+        private void btnPastry_Click(object sender, EventArgs e)
+        {
+            Pastry pastry = new Pastry();
+            pastry.Show();
+            this.Hide();
+        }
     }
 }
