@@ -50,7 +50,24 @@ namespace SwiftPOS1
                 return;
             }
 
-            MessageBox.Show("Wintermelon (" + size + ") added to cart!");
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyWinter.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Wintermelon (" + size + ") x" + qty + " added to cart!");
+            txtQtyWinter.Clear();
         }
 
         private void btnAddtoCartOki_Click(object sender, EventArgs e)
@@ -72,7 +89,24 @@ namespace SwiftPOS1
                 return;
             }
 
-            MessageBox.Show("Okinawa (" + size + ") added to cart!");
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyOkinawa.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Okinawa (" + size + ") x" + qty + " added to cart!");
+            txtQtyOkinawa.Clear();
         }
 
         private void btnAddtoCartCandC_Click(object sender, EventArgs e)
@@ -94,7 +128,24 @@ namespace SwiftPOS1
                 return;
             }
 
-            MessageBox.Show("Cookies and Cream (" + size + ") added to cart!");
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyCandC.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Cookies and Cream (" + size + ") x" + qty + " added to cart!");
+            txtQtyCandC.Clear();
         }
 
         private void btnAddtoCartSaltCarm_Click(object sender, EventArgs e)
@@ -116,7 +167,24 @@ namespace SwiftPOS1
                 return;
             }
 
-            MessageBox.Show("Salted Caramel (" + size + ") added to cart!");
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtySaltCarm.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Salted Caramel (" + size + ") x" + qty + " added to cart!");
+            txtQtySaltCarm.Clear();
         }
 
         private void btnAddtoCartHokaido_Click(object sender, EventArgs e)
@@ -138,7 +206,24 @@ namespace SwiftPOS1
                 return;
             }
 
-            MessageBox.Show("Hokaido (" + size + ") added to cart!");
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyHokk.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Hokkaido (" + size + ") x" + qty + " added to cart!");
+            txtQtyHokk.Clear();
         }
 
         private void btnAddtoCartThai_Click(object sender, EventArgs e)
@@ -160,7 +245,24 @@ namespace SwiftPOS1
                 return;
             }
 
-            MessageBox.Show("Thai (" + size + ") added to cart!");
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyThai.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Thai (" + size + ") x" + qty + " added to cart!");
+            txtQtyThai.Clear();
         }
 
         private void btnAddtoCartMatcha_Click(object sender, EventArgs e)
@@ -182,7 +284,25 @@ namespace SwiftPOS1
                 return;
             }
 
-            MessageBox.Show("Matcha (" + size + ") added to cart!");
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyMatcha.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+               
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Matcha (" + size + ") x" + qty + " added to cart!");
+            txtQtyMatcha.Clear();
         }
 
         private void btnFruitTea_Click(object sender, EventArgs e)
