@@ -58,5 +58,244 @@ namespace SwiftPOS1
             pastry.Show();
             this.Hide();
         }
+
+        private void txtQtyCapp_TextContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddToCartAmer_Click(object sender, EventArgs e)
+        {
+            // Size checker and add to cart logic
+            string size = "";
+
+            if (rbtnSmallGApple.Checked)
+            {
+                size = "Small";
+            }
+            else if (rbtnLargeGApple.Checked)
+            {
+                size = "Large";
+            }
+            else
+            {
+                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyGApple.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Green Apple (" + size + ") x" + qty + " added to cart!");
+            txtQtyGApple.Clear();
+        }
+
+        private void btnAddToCartStrawberry_Click(object sender, EventArgs e)
+        {
+            // Size checker and add to cart logic
+            string size = "";
+
+            if (rbtnSmallStrawberry.Checked)
+            {
+                size = "Small";
+            }
+            else if (rbtnLargeStrawberry.Checked)
+            {
+                size = "Large";
+            }
+            else
+            {
+                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyStrawberry.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Strawberry (" + size + ") x" + qty + " added to cart!");
+            txtQtyStrawberry.Clear();
+        }
+
+        private void btnAddToCartBlueberry_Click(object sender, EventArgs e)
+        {
+            // Size checker and add to cart logic
+            string size = "";
+
+            if (rbtnSmallBlueberry.Checked)
+            {
+                size = "Small";
+            }
+            else if (rbtnLargeBlueberry.Checked)
+            {
+                size = "Large";
+            }
+            else
+            {
+                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyBlueberry.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Blueberry (" + size + ") x" + qty + " added to cart!");
+            txtQtyBlueberry.Clear();
+        }
+
+        private void btnAddToCartMango_Click(object sender, EventArgs e)
+        {
+            // Size checker and add to cart logic
+            string size = "";
+
+            if (rbtnSmallMango.Checked)
+            {
+                size = "Small";
+            }
+            else if (rbtnLargeMango.Checked)
+            {
+                size = "Large";
+            }
+            else
+            {
+                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyMango.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Mango (" + size + ") x" + qty + " added to cart!");
+            txtQtyMango.Clear();
+        }
+
+        private void btnAddToCartPeach_Click(object sender, EventArgs e)
+        {
+            // Size checker and add to cart logic
+            string size = "";
+
+            if (rbtnSmallPeach.Checked)
+            {
+                size = "Small";
+            }
+            else if (rbtnLargePeach.Checked)
+            {
+                size = "Large";
+            }
+            else
+            {
+                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyPeach.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Peach (" + size + ") x" + qty + " added to cart!");
+            txtQtyPeach.Clear();
+        }
+
+        private void btnAddToCartLychee_Click(object sender, EventArgs e)
+        {
+            // Size checker and add to cart logic
+            string size = "";
+
+            if (rbtnSmallLychee.Checked)
+            {
+                size = "Small";
+            }
+            else if (rbtnLargeLychee.Checked)
+            {
+                size = "Large";
+            }
+            else
+            {
+                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // ---- ADD THIS (quantity) ----
+            string qtyText = txtQtyLychee.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            {
+                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // ---- END ADD ----
+
+            MessageBox.Show("Lychee (" + size + ") x" + qty + " added to cart!");
+            txtQtyLychee.Clear();
+        }
     }
 }
