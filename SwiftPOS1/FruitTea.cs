@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SiticoneNetFrameworkUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,285 +18,136 @@ namespace SwiftPOS1
             InitializeComponent();
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+
+        //size class
+        private bool TryGetSize(SiticoneRadioButton smallBtn, SiticoneRadioButton largeBtn, out string size)
         {
-            Menu menu = new Menu();
-            menu.Show();
+            size = "";
+
+            if (smallBtn.Checked)
+            {
+                size = "Small";
+                return true;
+            }
+
+            if (largeBtn.Checked)
+            {
+                size = "Large";
+                return true;
+            }
+
+            MessageBox.Show("Please select a size first.", "Missing Size",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+        //quantity class/logic
+        private bool TryGetQty(SiticoneTextBoxAdvanced qtyBox, out int qty)
+        {
+            qty = 0;
+
+            string qtyText = qtyBox.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(qtyText))
+            {
+                MessageBox.Show("Enter quantity first.", "Missing Quantity",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(qtyText, out qty))
+            {
+                MessageBox.Show("Quantity must be a valid number.", "Invalid Quantity",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Quantity must be higher than 0.", "Invalid Quantity",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+        // Add to cart logic/class
+        private void AddDrinkToCart(
+            string itemName,
+            SiticoneRadioButton smallBtn,
+            SiticoneRadioButton largeBtn,
+            SiticoneTextBoxAdvanced qtyBox,
+            decimal smallPrice,
+            decimal largePrice)
+        {
+            if (!TryGetSize(smallBtn, largeBtn, out string size)) return;
+            if (!TryGetQty(qtyBox, out int qty)) return;
+
+            decimal price = (size == "Small") ? smallPrice : largePrice;
+
+            CartService.AddItem(itemName, size, price, qty);
+
+            MessageBox.Show($"{itemName} ({size}) x{qty} added to cart!", "Added to Cart",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            qtyBox.Clear();
+        }
+
+        private void GoTo(Form next)
+        {
+            next.Show();
             this.Hide();
         }
 
-        private void btnCoffee_Click(object sender, EventArgs e)
+        //navigation
+        private void btnMenu_Click(object sender, EventArgs e) => GoTo(new Menu());
+        
+
+        
+
+        private void btnCoffee_Click(object sender, EventArgs e) => GoTo(new Coffee());
+
+        private void btnMilktea_Click(object sender, EventArgs e) => GoTo(new MilkTea());
+
+        private void btnCart_Click(object sender, EventArgs e) => GoTo(new Cart());
+
+        private void btnRiceMeal_Click(object sender, EventArgs e) => GoTo(new Rice_Meal());
+
+        private void btnPastry_Click(object sender, EventArgs e) => GoTo(new Pastry());
+
+        //add to cart buttons
+        private void btnAddToCartAmer_Click(object sender, EventArgs e)
         {
-            Coffee coffee = new Coffee();
-            coffee.Show();
-            this.Hide();
+            AddDrinkToCart("Green Apple", rbtnSmallGApple, rbtnLargeGApple, txtQtyGApple, 89m, 99m);
         }
 
-        private void btnMilktea_Click(object sender, EventArgs e)
+        private void btnAddToCartStrawberry_Click(object sender, EventArgs e)
         {
-            MilkTea milkTea = new MilkTea();    
-             milkTea.Show();
-                this.Hide();
+            AddDrinkToCart("Strawberry", rbtnSmallStrawberry, rbtnLargeStrawberry, txtQtyStrawberry, 89m, 99m);
         }
 
-        private void btnCart_Click(object sender, EventArgs e)
+        private void btnAddToCartBlueberry_Click(object sender, EventArgs e)
         {
-            Cart cart = new Cart();
-            cart.Show();
-            this.Hide();
+            AddDrinkToCart("Blueberry", rbtnSmallBlueberry, rbtnLargeBlueberry, txtQtyBlueberry, 89m, 99m);
         }
 
-        private void btnRiceMeal_Click(object sender, EventArgs e)
+        private void btnAddToCartMango_Click(object sender, EventArgs e)
         {
-            Rice_Meal rice_Meal = new Rice_Meal();
-            rice_Meal.Show();
-            this.Hide();
+            AddDrinkToCart("Mango", rbtnSmallMango, rbtnLargeMango, txtQtyMango, 89m, 99m);
         }
 
-        private void btnPastry_Click(object sender, EventArgs e)
+        private void btnAddToCartPeach_Click(object sender, EventArgs e)
         {
-            Pastry pastry = new Pastry();
-            pastry.Show();
-            this.Hide();
+            AddDrinkToCart("Peach", rbtnSmallPeach, rbtnLargePeach, txtQtyPeach, 89m, 99m);
+        }
+
+        private void btnAddToCartLychee_Click(object sender, EventArgs e)
+        {
+            AddDrinkToCart("Lychee", rbtnSmallLychee, rbtnLargeLychee, txtQtyLychee, 89m, 99m);
         }
 
         private void txtQtyCapp_TextContentChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnAddToCartAmer_Click(object sender, EventArgs e)
-        {
-            // Size checker and add to cart logic
-            string size = "";
-
-            if (rbtnSmallGApple.Checked)
-            {
-                size = "Small";
-            }
-            else if (rbtnLargeGApple.Checked)
-            {
-                size = "Large";
-            }
-            else
-            {
-                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyGApple.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Green Apple (" + size + ") x" + qty + " added to cart!");
-            txtQtyGApple.Clear();
-        }
-
-        private void btnAddToCartStrawberry_Click(object sender, EventArgs e)
-        {
-            // Size checker and add to cart logic
-            string size = "";
-
-            if (rbtnSmallStrawberry.Checked)
-            {
-                size = "Small";
-            }
-            else if (rbtnLargeStrawberry.Checked)
-            {
-                size = "Large";
-            }
-            else
-            {
-                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyStrawberry.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Strawberry (" + size + ") x" + qty + " added to cart!");
-            txtQtyStrawberry.Clear();
-        }
-
-        private void btnAddToCartBlueberry_Click(object sender, EventArgs e)
-        {
-            // Size checker and add to cart logic
-            string size = "";
-
-            if (rbtnSmallBlueberry.Checked)
-            {
-                size = "Small";
-            }
-            else if (rbtnLargeBlueberry.Checked)
-            {
-                size = "Large";
-            }
-            else
-            {
-                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyBlueberry.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Blueberry (" + size + ") x" + qty + " added to cart!");
-            txtQtyBlueberry.Clear();
-        }
-
-        private void btnAddToCartMango_Click(object sender, EventArgs e)
-        {
-            // Size checker and add to cart logic
-            string size = "";
-
-            if (rbtnSmallMango.Checked)
-            {
-                size = "Small";
-            }
-            else if (rbtnLargeMango.Checked)
-            {
-                size = "Large";
-            }
-            else
-            {
-                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyMango.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Mango (" + size + ") x" + qty + " added to cart!");
-            txtQtyMango.Clear();
-        }
-
-        private void btnAddToCartPeach_Click(object sender, EventArgs e)
-        {
-            // Size checker and add to cart logic
-            string size = "";
-
-            if (rbtnSmallPeach.Checked)
-            {
-                size = "Small";
-            }
-            else if (rbtnLargePeach.Checked)
-            {
-                size = "Large";
-            }
-            else
-            {
-                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyPeach.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Peach (" + size + ") x" + qty + " added to cart!");
-            txtQtyPeach.Clear();
-        }
-
-        private void btnAddToCartLychee_Click(object sender, EventArgs e)
-        {
-            // Size checker and add to cart logic
-            string size = "";
-
-            if (rbtnSmallLychee.Checked)
-            {
-                size = "Small";
-            }
-            else if (rbtnLargeLychee.Checked)
-            {
-                size = "Large";
-            }
-            else
-            {
-                MessageBox.Show("Select size first!", "No Size Choosen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyLychee.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Lychee (" + size + ") x" + qty + " added to cart!");
-            txtQtyLychee.Clear();
         }
     }
 }

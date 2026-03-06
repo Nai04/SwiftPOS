@@ -107,6 +107,7 @@
     <Compile Include="Cart.Designer.cs">
       <DependentUpon>Cart.cs</DependentUpon>
     </Compile>
+    <Compile Include="CartService.cs" />
     <Compile Include="Coffee.cs">
       <SubType>Form</SubType>
     </Compile>
