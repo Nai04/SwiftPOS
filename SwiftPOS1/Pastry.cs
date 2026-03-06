@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SiticoneNetFrameworkUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,208 +18,112 @@ namespace SwiftPOS1
             InitializeComponent();
         }
 
-        private void btnCoffee_Click(object sender, EventArgs e)
-        {
-            Coffee coffee = new Coffee();
-            coffee.Show();
-            this.Hide();
-        }
+        //quantity class/logic
 
-        private void btnMilktea_Click(object sender, EventArgs e)
+        private bool TryGetQty(SiticoneTextBoxAdvanced qtyBox, out int qty)
         {
-            MilkTea milkTea = new MilkTea();
-            milkTea.Show();
-            this.Hide();
+            qty = 0;
 
-        }
-
-        private void btnFruitTea_Click(object sender, EventArgs e)
-        {
-            FruitTea fruitTea = new FruitTea();
-            fruitTea.Show();
-            this.Hide();
-        }
-
-        private void btnRiceMeal_Click(object sender, EventArgs e)
-        {
-            Rice_Meal rice_Meal = new Rice_Meal();
-            rice_Meal.Show();
-            this.Hide();
-        }
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-           Menu menu = new Menu();
-            menu.Show();
-            this.Hide();
-        }
-
-        private void btnCart_Click(object sender, EventArgs e)
-        {
-            Cart cart = new Cart();
-            cart.Show();
-            this.Hide();
-        }
-
-        private void btnSnacksPasta_Click(object sender, EventArgs e)
-        {
-            SnacksPasta snacksPasta = new SnacksPasta();
-            snacksPasta.Show();
-            this.Hide();
-        }
-
-        private void btnAddToCartChocoCook_Click(object sender, EventArgs e)
-        {
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyChocoCook.Text.Trim();
+            string qtyText = qtyBox.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(qtyText))
             {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Enter quantity first.", "Missing Quantity",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
+            if (!int.TryParse(qtyText, out qty))
             {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Quantity must be a valid number.", "Invalid Quantity",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
-            // ---- END ADD ----
 
-            MessageBox.Show("Chocolate Cookies " + " x " + qty + " added to cart!");
-            txtQtyChocoCook.Clear();
+            if (qty <= 0)
+            {
+                MessageBox.Show("Quantity must be higher than 0.", "Invalid Quantity",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+        // Add to cart logic for pastries
+        private void AddPastryToCart(
+            string itemName,
+            SiticoneTextBoxAdvanced qtyBox,
+            decimal price)
+        {
+            if (!TryGetQty(qtyBox, out int qty)) return;
+
+            CartService.AddItem(itemName, "", price, qty);
+
+            MessageBox.Show($"{itemName} x{qty} added to cart!",
+                "Added to Cart",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+
+            qtyBox.Clear();
+        }
+
+        private void GoTo(Form next)
+        {
+            next.Show();
+            this.Hide();
+        }
+
+        //navigation buttons
+
+        private void btnCoffee_Click(object sender, EventArgs e) => GoTo(new Coffee());
+
+        private void btnMilktea_Click(object sender, EventArgs e) => GoTo(new MilkTea());
+
+        private void btnFruitTea_Click(object sender, EventArgs e) => GoTo(new FruitTea());
+
+        private void btnRiceMeal_Click(object sender, EventArgs e) => GoTo(new Rice_Meal());
+
+        private void btnMenu_Click(object sender, EventArgs e) => GoTo(new Menu());
+
+        private void btnCart_Click(object sender, EventArgs e) => GoTo(new Cart());
+
+        private void btnSnacksPasta_Click(object sender, EventArgs e) => GoTo(new SnacksPasta());
+
+        //add to cart buttons for pastries
+
+        private void btnAddToCartChocoCook_Click(object sender, EventArgs e)
+        {
+            AddPastryToCart("Chocolate Cookies", txtQtyChocoCook, 69m);
         }
 
         private void btnAddToCartCroissant_Click(object sender, EventArgs e)
         {
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyCroissant.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Croissant " + " x " + qty + " added to cart!");
-            txtQtyCroissant.Clear();
+            AddPastryToCart("Croissant", txtQtyCroissant, 79m);
         }
 
         private void btnAddToCartCheeseEns_Click(object sender, EventArgs e)
         {
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyCheeseEns.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Cheese Ensaymada " + " x " + qty + " added to cart!");
-            txtQtyCheeseEns.Clear();
+            AddPastryToCart("Cheese Ensaymada", txtQtyCheeseEns, 65m);
         }
 
         private void btnAddToCartYemaEns_Click(object sender, EventArgs e)
         {
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyYemaEns.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Yema Ensaymada " + " x " + qty + " added to cart!");
-            txtQtyYemaEns.Clear();
+            AddPastryToCart("Yema Ensaymada", txtQtyYemaEns, 65m);
         }
 
         private void btnAddToCartUbeEns_Click(object sender, EventArgs e)
         {
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyUbeEns.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Ube Ensaymada " + " x " + qty + " added to cart!");
-            txtQtyUbeEns.Clear();
+            AddPastryToCart("Ube Ensaymada", txtQtyUbeEns, 65m);
         }
 
         private void btnAddToCartChocoDonut_Click(object sender, EventArgs e)
         {
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyChocoDonut.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Chocolate Donut " + " x " + qty + " added to cart!");
-            txtQtyChocoDonut.Clear();
+            AddPastryToCart("Chocolate Donut", txtQtyChocoDonut, 55m);
         }
 
         private void btnAddToCartCinnamon_Click(object sender, EventArgs e)
         {
-            // ---- ADD THIS (quantity) ----
-            string qtyText = txtQtyCinnamon.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(qtyText))
-            {
-                MessageBox.Show("Enter quantity first!", "No Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (!int.TryParse(qtyText, out int qty) || qty < 1)
-            {
-                MessageBox.Show("Quantity must be a number 1 or higher!", "Invalid Quantity", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            // ---- END ADD ----
-
-            MessageBox.Show("Cinnamon " + " x " + qty + " added to cart!");
-            txtQtyCinnamon.Clear();
+            AddPastryToCart("Cinnamon Roll", txtQtyCinnamon, 75m);
         }
     }
 }
