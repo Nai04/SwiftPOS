@@ -107,6 +107,7 @@
     <Compile Include="Cart.Designer.cs">
       <DependentUpon>Cart.cs</DependentUpon>
     </Compile>
+    <Compile Include="CartService.cs" />
     <Compile Include="Coffee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +119,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FruitTea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FruitTea.Designer.cs">
+      <DependentUpon>FruitTea.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -131,8 +138,26 @@
     <Compile Include="MilkTea.Designer.cs">
       <DependentUpon>MilkTea.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pastry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pastry.Designer.cs">
+      <DependentUpon>Pastry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rice Meal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rice Meal.Designer.cs">
+      <DependentUpon>Rice Meal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SnacksPasta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SnacksPasta.Designer.cs">
+      <DependentUpon>SnacksPasta.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkStation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,11 +173,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FruitTea.resx">
+      <DependentUpon>FruitTea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MilkTea.resx">
       <DependentUpon>MilkTea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pastry.resx">
+      <DependentUpon>Pastry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -164,6 +195,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rice Meal.resx">
+      <DependentUpon>Rice Meal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SnacksPasta.resx">
+      <DependentUpon>SnacksPasta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkStation.resx">
       <DependentUpon>WorkStation.cs</DependentUpon>
     </EmbeddedResource>

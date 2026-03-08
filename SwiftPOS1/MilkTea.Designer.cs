@@ -71,6 +71,20 @@
             this.rbtnSmallThai = new SiticoneNetFrameworkUI.SiticoneRadioButton();
             this.rbtnLargeThai = new SiticoneNetFrameworkUI.SiticoneRadioButton();
             this.btnAddtoCartThai = new SiticoneNetFrameworkUI.SiticoneButton();
+            this.txtQtyWinter = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel11 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyOkinawa = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel9 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyCandC = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel10 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtySaltCarm = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel12 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyHokk = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel13 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyMatcha = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel14 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyThai = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel15 = new SiticoneNetFrameworkUI.SiticoneLabel();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -201,6 +215,7 @@
             this.btnCart.TooltipText = null;
             this.btnCart.UseAdvancedRendering = true;
             this.btnCart.UseParticles = false;
+            this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
             // 
             // btnLogout
             // 
@@ -673,6 +688,7 @@
             this.btnPastry.TooltipText = null;
             this.btnPastry.UseAdvancedRendering = true;
             this.btnPastry.UseParticles = false;
+            this.btnPastry.Click += new System.EventHandler(this.btnPastry_Click);
             // 
             // btnRiceMeal
             // 
@@ -749,6 +765,7 @@
             this.btnRiceMeal.TooltipText = null;
             this.btnRiceMeal.UseAdvancedRendering = true;
             this.btnRiceMeal.UseParticles = false;
+            this.btnRiceMeal.Click += new System.EventHandler(this.btnRiceMeal_Click);
             // 
             // btnFruitTea
             // 
@@ -825,6 +842,7 @@
             this.btnFruitTea.TooltipText = null;
             this.btnFruitTea.UseAdvancedRendering = true;
             this.btnFruitTea.UseParticles = false;
+            this.btnFruitTea.Click += new System.EventHandler(this.btnFruitTea_Click);
             // 
             // btnMilktea
             // 
@@ -1027,7 +1045,7 @@
             this.siticoneLabel6.Name = "siticoneLabel6";
             this.siticoneLabel6.Size = new System.Drawing.Size(112, 23);
             this.siticoneLabel6.TabIndex = 29;
-            this.siticoneLabel6.Text = "Hokaido";
+            this.siticoneLabel6.Text = "Hokkaido";
             // 
             // siticoneLabel7
             // 
@@ -1180,7 +1198,7 @@
             this.btnAddToCartWinter.IsReadOnly = false;
             this.btnAddToCartWinter.IsToggleButton = false;
             this.btnAddToCartWinter.IsToggled = false;
-            this.btnAddToCartWinter.Location = new System.Drawing.Point(245, 380);
+            this.btnAddToCartWinter.Location = new System.Drawing.Point(245, 413);
             this.btnAddToCartWinter.LongPressDurationMS = 1000;
             this.btnAddToCartWinter.Name = "btnAddToCartWinter";
             this.btnAddToCartWinter.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -1381,7 +1399,7 @@
             this.btnAddtoCartOki.IsReadOnly = false;
             this.btnAddtoCartOki.IsToggleButton = false;
             this.btnAddtoCartOki.IsToggled = false;
-            this.btnAddtoCartOki.Location = new System.Drawing.Point(510, 380);
+            this.btnAddtoCartOki.Location = new System.Drawing.Point(510, 413);
             this.btnAddtoCartOki.LongPressDurationMS = 1000;
             this.btnAddtoCartOki.Name = "btnAddtoCartOki";
             this.btnAddtoCartOki.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -1540,7 +1558,7 @@
             this.btnAddtoCartCandC.IsReadOnly = false;
             this.btnAddtoCartCandC.IsToggleButton = false;
             this.btnAddtoCartCandC.IsToggled = false;
-            this.btnAddtoCartCandC.Location = new System.Drawing.Point(820, 380);
+            this.btnAddtoCartCandC.Location = new System.Drawing.Point(820, 413);
             this.btnAddtoCartCandC.LongPressDurationMS = 1000;
             this.btnAddtoCartCandC.Name = "btnAddtoCartCandC";
             this.btnAddtoCartCandC.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -1699,7 +1717,7 @@
             this.btnAddtoCartSaltCarm.IsReadOnly = false;
             this.btnAddtoCartSaltCarm.IsToggleButton = false;
             this.btnAddtoCartSaltCarm.IsToggled = false;
-            this.btnAddtoCartSaltCarm.Location = new System.Drawing.Point(1073, 380);
+            this.btnAddtoCartSaltCarm.Location = new System.Drawing.Point(1073, 413);
             this.btnAddtoCartSaltCarm.LongPressDurationMS = 1000;
             this.btnAddtoCartSaltCarm.Name = "btnAddtoCartSaltCarm";
             this.btnAddtoCartSaltCarm.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -1858,7 +1876,7 @@
             this.btnAddtoCartHokaido.IsReadOnly = false;
             this.btnAddtoCartHokaido.IsToggleButton = false;
             this.btnAddtoCartHokaido.IsToggled = false;
-            this.btnAddtoCartHokaido.Location = new System.Drawing.Point(1364, 380);
+            this.btnAddtoCartHokaido.Location = new System.Drawing.Point(1364, 413);
             this.btnAddtoCartHokaido.LongPressDurationMS = 1000;
             this.btnAddtoCartHokaido.Name = "btnAddtoCartHokaido";
             this.btnAddtoCartHokaido.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -2017,7 +2035,7 @@
             this.btnAddtoCartMatcha.IsReadOnly = false;
             this.btnAddtoCartMatcha.IsToggleButton = false;
             this.btnAddtoCartMatcha.IsToggled = false;
-            this.btnAddtoCartMatcha.Location = new System.Drawing.Point(1657, 380);
+            this.btnAddtoCartMatcha.Location = new System.Drawing.Point(1657, 413);
             this.btnAddtoCartMatcha.LongPressDurationMS = 1000;
             this.btnAddtoCartMatcha.Name = "btnAddtoCartMatcha";
             this.btnAddtoCartMatcha.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -2176,7 +2194,7 @@
             this.btnAddtoCartThai.IsReadOnly = false;
             this.btnAddtoCartThai.IsToggleButton = false;
             this.btnAddtoCartThai.IsToggled = false;
-            this.btnAddtoCartThai.Location = new System.Drawing.Point(245, 694);
+            this.btnAddtoCartThai.Location = new System.Drawing.Point(245, 721);
             this.btnAddtoCartThai.LongPressDurationMS = 1000;
             this.btnAddtoCartThai.Name = "btnAddtoCartThai";
             this.btnAddtoCartThai.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -2204,11 +2222,305 @@
             this.btnAddtoCartThai.UseParticles = false;
             this.btnAddtoCartThai.Click += new System.EventHandler(this.btnAddtoCartThai_Click);
             // 
+            // txtQtyWinter
+            // 
+            this.txtQtyWinter.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyWinter.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyWinter.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyWinter.BottomLeftCornerRadius = 25;
+            this.txtQtyWinter.BottomRightCornerRadius = 25;
+            this.txtQtyWinter.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyWinter.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyWinter.FocusImage = null;
+            this.txtQtyWinter.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyWinter.HoverImage = null;
+            this.txtQtyWinter.IdleImage = null;
+            this.txtQtyWinter.Location = new System.Drawing.Point(329, 384);
+            this.txtQtyWinter.Name = "txtQtyWinter";
+            this.txtQtyWinter.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyWinter.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyWinter.PlaceholderText = "";
+            this.txtQtyWinter.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyWinter.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyWinter.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyWinter.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyWinter.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyWinter.TabIndex = 59;
+            this.txtQtyWinter.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyWinter.TextContent = "";
+            this.txtQtyWinter.TopLeftCornerRadius = 25;
+            this.txtQtyWinter.TopRightCornerRadius = 25;
+            this.txtQtyWinter.ValidationPattern = "";
+            // 
+            // siticoneLabel11
+            // 
+            this.siticoneLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel11.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel11.Location = new System.Drawing.Point(245, 387);
+            this.siticoneLabel11.Name = "siticoneLabel11";
+            this.siticoneLabel11.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel11.TabIndex = 58;
+            this.siticoneLabel11.Text = "Quantity";
+            // 
+            // txtQtyOkinawa
+            // 
+            this.txtQtyOkinawa.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyOkinawa.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyOkinawa.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyOkinawa.BottomLeftCornerRadius = 25;
+            this.txtQtyOkinawa.BottomRightCornerRadius = 25;
+            this.txtQtyOkinawa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyOkinawa.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyOkinawa.FocusImage = null;
+            this.txtQtyOkinawa.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyOkinawa.HoverImage = null;
+            this.txtQtyOkinawa.IdleImage = null;
+            this.txtQtyOkinawa.Location = new System.Drawing.Point(594, 384);
+            this.txtQtyOkinawa.Name = "txtQtyOkinawa";
+            this.txtQtyOkinawa.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyOkinawa.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyOkinawa.PlaceholderText = "";
+            this.txtQtyOkinawa.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyOkinawa.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyOkinawa.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyOkinawa.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyOkinawa.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyOkinawa.TabIndex = 61;
+            this.txtQtyOkinawa.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyOkinawa.TextContent = "";
+            this.txtQtyOkinawa.TopLeftCornerRadius = 25;
+            this.txtQtyOkinawa.TopRightCornerRadius = 25;
+            this.txtQtyOkinawa.ValidationPattern = "";
+            // 
+            // siticoneLabel9
+            // 
+            this.siticoneLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel9.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel9.Location = new System.Drawing.Point(510, 387);
+            this.siticoneLabel9.Name = "siticoneLabel9";
+            this.siticoneLabel9.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel9.TabIndex = 60;
+            this.siticoneLabel9.Text = "Quantity";
+            // 
+            // txtQtyCandC
+            // 
+            this.txtQtyCandC.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyCandC.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyCandC.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyCandC.BottomLeftCornerRadius = 25;
+            this.txtQtyCandC.BottomRightCornerRadius = 25;
+            this.txtQtyCandC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyCandC.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyCandC.FocusImage = null;
+            this.txtQtyCandC.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyCandC.HoverImage = null;
+            this.txtQtyCandC.IdleImage = null;
+            this.txtQtyCandC.Location = new System.Drawing.Point(904, 385);
+            this.txtQtyCandC.Name = "txtQtyCandC";
+            this.txtQtyCandC.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyCandC.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyCandC.PlaceholderText = "";
+            this.txtQtyCandC.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyCandC.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyCandC.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyCandC.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyCandC.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyCandC.TabIndex = 63;
+            this.txtQtyCandC.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyCandC.TextContent = "";
+            this.txtQtyCandC.TopLeftCornerRadius = 25;
+            this.txtQtyCandC.TopRightCornerRadius = 25;
+            this.txtQtyCandC.ValidationPattern = "";
+            // 
+            // siticoneLabel10
+            // 
+            this.siticoneLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel10.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel10.Location = new System.Drawing.Point(820, 388);
+            this.siticoneLabel10.Name = "siticoneLabel10";
+            this.siticoneLabel10.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel10.TabIndex = 62;
+            this.siticoneLabel10.Text = "Quantity";
+            // 
+            // txtQtySaltCarm
+            // 
+            this.txtQtySaltCarm.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtySaltCarm.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtySaltCarm.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtySaltCarm.BottomLeftCornerRadius = 25;
+            this.txtQtySaltCarm.BottomRightCornerRadius = 25;
+            this.txtQtySaltCarm.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtySaltCarm.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtySaltCarm.FocusImage = null;
+            this.txtQtySaltCarm.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtySaltCarm.HoverImage = null;
+            this.txtQtySaltCarm.IdleImage = null;
+            this.txtQtySaltCarm.Location = new System.Drawing.Point(1157, 384);
+            this.txtQtySaltCarm.Name = "txtQtySaltCarm";
+            this.txtQtySaltCarm.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtySaltCarm.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtySaltCarm.PlaceholderText = "";
+            this.txtQtySaltCarm.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtySaltCarm.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtySaltCarm.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtySaltCarm.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtySaltCarm.Size = new System.Drawing.Size(64, 27);
+            this.txtQtySaltCarm.TabIndex = 65;
+            this.txtQtySaltCarm.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtySaltCarm.TextContent = "";
+            this.txtQtySaltCarm.TopLeftCornerRadius = 25;
+            this.txtQtySaltCarm.TopRightCornerRadius = 25;
+            this.txtQtySaltCarm.ValidationPattern = "";
+            // 
+            // siticoneLabel12
+            // 
+            this.siticoneLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel12.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel12.Location = new System.Drawing.Point(1073, 387);
+            this.siticoneLabel12.Name = "siticoneLabel12";
+            this.siticoneLabel12.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel12.TabIndex = 64;
+            this.siticoneLabel12.Text = "Quantity";
+            // 
+            // txtQtyHokk
+            // 
+            this.txtQtyHokk.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyHokk.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyHokk.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyHokk.BottomLeftCornerRadius = 25;
+            this.txtQtyHokk.BottomRightCornerRadius = 25;
+            this.txtQtyHokk.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyHokk.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyHokk.FocusImage = null;
+            this.txtQtyHokk.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyHokk.HoverImage = null;
+            this.txtQtyHokk.IdleImage = null;
+            this.txtQtyHokk.Location = new System.Drawing.Point(1448, 384);
+            this.txtQtyHokk.Name = "txtQtyHokk";
+            this.txtQtyHokk.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyHokk.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyHokk.PlaceholderText = "";
+            this.txtQtyHokk.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyHokk.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyHokk.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyHokk.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyHokk.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyHokk.TabIndex = 67;
+            this.txtQtyHokk.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyHokk.TextContent = "";
+            this.txtQtyHokk.TopLeftCornerRadius = 25;
+            this.txtQtyHokk.TopRightCornerRadius = 25;
+            this.txtQtyHokk.ValidationPattern = "";
+            // 
+            // siticoneLabel13
+            // 
+            this.siticoneLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel13.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel13.Location = new System.Drawing.Point(1364, 387);
+            this.siticoneLabel13.Name = "siticoneLabel13";
+            this.siticoneLabel13.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel13.TabIndex = 66;
+            this.siticoneLabel13.Text = "Quantity";
+            // 
+            // txtQtyMatcha
+            // 
+            this.txtQtyMatcha.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyMatcha.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyMatcha.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyMatcha.BottomLeftCornerRadius = 25;
+            this.txtQtyMatcha.BottomRightCornerRadius = 25;
+            this.txtQtyMatcha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyMatcha.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyMatcha.FocusImage = null;
+            this.txtQtyMatcha.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyMatcha.HoverImage = null;
+            this.txtQtyMatcha.IdleImage = null;
+            this.txtQtyMatcha.Location = new System.Drawing.Point(1741, 384);
+            this.txtQtyMatcha.Name = "txtQtyMatcha";
+            this.txtQtyMatcha.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyMatcha.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyMatcha.PlaceholderText = "";
+            this.txtQtyMatcha.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyMatcha.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyMatcha.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyMatcha.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyMatcha.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyMatcha.TabIndex = 69;
+            this.txtQtyMatcha.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyMatcha.TextContent = "";
+            this.txtQtyMatcha.TopLeftCornerRadius = 25;
+            this.txtQtyMatcha.TopRightCornerRadius = 25;
+            this.txtQtyMatcha.ValidationPattern = "";
+            // 
+            // siticoneLabel14
+            // 
+            this.siticoneLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel14.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel14.Location = new System.Drawing.Point(1657, 387);
+            this.siticoneLabel14.Name = "siticoneLabel14";
+            this.siticoneLabel14.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel14.TabIndex = 68;
+            this.siticoneLabel14.Text = "Quantity";
+            // 
+            // txtQtyThai
+            // 
+            this.txtQtyThai.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyThai.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyThai.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyThai.BottomLeftCornerRadius = 25;
+            this.txtQtyThai.BottomRightCornerRadius = 25;
+            this.txtQtyThai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyThai.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyThai.FocusImage = null;
+            this.txtQtyThai.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyThai.HoverImage = null;
+            this.txtQtyThai.IdleImage = null;
+            this.txtQtyThai.Location = new System.Drawing.Point(329, 688);
+            this.txtQtyThai.Name = "txtQtyThai";
+            this.txtQtyThai.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyThai.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyThai.PlaceholderText = "";
+            this.txtQtyThai.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyThai.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyThai.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyThai.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyThai.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyThai.TabIndex = 71;
+            this.txtQtyThai.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyThai.TextContent = "";
+            this.txtQtyThai.TopLeftCornerRadius = 25;
+            this.txtQtyThai.TopRightCornerRadius = 25;
+            this.txtQtyThai.ValidationPattern = "";
+            // 
+            // siticoneLabel15
+            // 
+            this.siticoneLabel15.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel15.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel15.Location = new System.Drawing.Point(245, 691);
+            this.siticoneLabel15.Name = "siticoneLabel15";
+            this.siticoneLabel15.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel15.TabIndex = 70;
+            this.siticoneLabel15.Text = "Quantity";
+            // 
             // MilkTea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.txtQtyThai);
+            this.Controls.Add(this.siticoneLabel15);
+            this.Controls.Add(this.txtQtyMatcha);
+            this.Controls.Add(this.siticoneLabel14);
+            this.Controls.Add(this.txtQtyHokk);
+            this.Controls.Add(this.siticoneLabel13);
+            this.Controls.Add(this.txtQtySaltCarm);
+            this.Controls.Add(this.siticoneLabel12);
+            this.Controls.Add(this.txtQtyCandC);
+            this.Controls.Add(this.siticoneLabel10);
+            this.Controls.Add(this.txtQtyOkinawa);
+            this.Controls.Add(this.siticoneLabel9);
+            this.Controls.Add(this.txtQtyWinter);
+            this.Controls.Add(this.siticoneLabel11);
             this.Controls.Add(this.rbtnSmallThai);
             this.Controls.Add(this.rbtnLargeThai);
             this.Controls.Add(this.btnAddtoCartThai);
@@ -2299,5 +2611,19 @@
         private SiticoneNetFrameworkUI.SiticoneRadioButton rbtnSmallThai;
         private SiticoneNetFrameworkUI.SiticoneRadioButton rbtnLargeThai;
         private SiticoneNetFrameworkUI.SiticoneButton btnAddtoCartThai;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyWinter;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel11;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyOkinawa;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel9;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyCandC;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel10;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtySaltCarm;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel12;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyHokk;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel13;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyMatcha;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel14;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyThai;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel15;
     }
 }

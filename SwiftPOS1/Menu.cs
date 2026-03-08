@@ -58,6 +58,34 @@ namespace SwiftPOS1
             milkTea.Show();
             this.Hide();
         }
+
+        private void btnFruitTea_Click(object sender, EventArgs e)
+        {
+            FruitTea fruit = new FruitTea();
+            fruit.Show();
+            this.Hide();
+        }
+
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            Cart c = new Cart();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btnRiceMeal_Click(object sender, EventArgs e)
+        {
+            Rice_Meal ricemeal = new Rice_Meal();
+            ricemeal.Show();
+            this.Hide();
+        }
+
+        private void btnPastry_Click(object sender, EventArgs e)
+        {
+            Pastry pastry = new Pastry();
+            pastry.Show();
+            this.Hide();
+        }
     }
 
 

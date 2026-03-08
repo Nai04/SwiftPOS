@@ -75,6 +75,22 @@
             this.rbtnSmallIcedMochaLatte = new SiticoneNetFrameworkUI.SiticoneRadioButton();
             this.rbtnLargeIcedMochaLatte = new SiticoneNetFrameworkUI.SiticoneRadioButton();
             this.btnAddToCartIcedMochLatte = new SiticoneNetFrameworkUI.SiticoneButton();
+            this.siticoneLabel10 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQuantityAmer = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.txtQtyCapp = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel11 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQuantityHChoc = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel12 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyHLatte = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel13 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtySpaLatte = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel14 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyHMochaLatte = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel15 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyIcedLatte = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel16 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.txtQtyIcedMochaLatte = new SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced();
+            this.siticoneLabel17 = new SiticoneNetFrameworkUI.SiticoneLabel();
             this.siticonePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -372,6 +388,7 @@
             this.btnMenu.TooltipText = null;
             this.btnMenu.UseAdvancedRendering = true;
             this.btnMenu.UseParticles = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnInventory
             // 
@@ -678,6 +695,7 @@
             this.btnPastry.TooltipText = null;
             this.btnPastry.UseAdvancedRendering = true;
             this.btnPastry.UseParticles = false;
+            this.btnPastry.Click += new System.EventHandler(this.btnPastry_Click);
             // 
             // btnRiceMeal
             // 
@@ -754,6 +772,7 @@
             this.btnRiceMeal.TooltipText = null;
             this.btnRiceMeal.UseAdvancedRendering = true;
             this.btnRiceMeal.UseParticles = false;
+            this.btnRiceMeal.Click += new System.EventHandler(this.btnRiceMeal_Click);
             // 
             // btnFruitTea
             // 
@@ -830,6 +849,7 @@
             this.btnFruitTea.TooltipText = null;
             this.btnFruitTea.UseAdvancedRendering = true;
             this.btnFruitTea.UseParticles = false;
+            this.btnFruitTea.Click += new System.EventHandler(this.btnFruitTea_Click);
             // 
             // btnMilktea
             // 
@@ -1029,7 +1049,7 @@
             // 
             this.siticoneLabel6.BackColor = System.Drawing.Color.Transparent;
             this.siticoneLabel6.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel6.Location = new System.Drawing.Point(245, 455);
+            this.siticoneLabel6.Location = new System.Drawing.Point(245, 489);
             this.siticoneLabel6.Name = "siticoneLabel6";
             this.siticoneLabel6.Size = new System.Drawing.Size(105, 23);
             this.siticoneLabel6.TabIndex = 23;
@@ -1059,7 +1079,7 @@
             // 
             this.siticoneLabel9.BackColor = System.Drawing.Color.Transparent;
             this.siticoneLabel9.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel9.Location = new System.Drawing.Point(534, 455);
+            this.siticoneLabel9.Location = new System.Drawing.Point(518, 489);
             this.siticoneLabel9.Name = "siticoneLabel9";
             this.siticoneLabel9.Size = new System.Drawing.Size(157, 23);
             this.siticoneLabel9.TabIndex = 26;
@@ -1114,7 +1134,7 @@
             this.btnAddToCartAmer.IsReadOnly = false;
             this.btnAddToCartAmer.IsToggleButton = false;
             this.btnAddToCartAmer.IsToggled = false;
-            this.btnAddToCartAmer.Location = new System.Drawing.Point(245, 380);
+            this.btnAddToCartAmer.Location = new System.Drawing.Point(245, 413);
             this.btnAddToCartAmer.LongPressDurationMS = 1000;
             this.btnAddToCartAmer.Name = "btnAddToCartAmer";
             this.btnAddToCartAmer.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -1397,7 +1417,7 @@
             this.btnAddtoCartCapp.IsReadOnly = false;
             this.btnAddtoCartCapp.IsToggleButton = false;
             this.btnAddtoCartCapp.IsToggled = false;
-            this.btnAddtoCartCapp.Location = new System.Drawing.Point(522, 380);
+            this.btnAddtoCartCapp.Location = new System.Drawing.Point(522, 413);
             this.btnAddtoCartCapp.LongPressDurationMS = 1000;
             this.btnAddtoCartCapp.Name = "btnAddtoCartCapp";
             this.btnAddtoCartCapp.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -1556,7 +1576,7 @@
             this.btnAddToCartHChoc.IsReadOnly = false;
             this.btnAddToCartHChoc.IsToggleButton = false;
             this.btnAddToCartHChoc.IsToggled = false;
-            this.btnAddToCartHChoc.Location = new System.Drawing.Point(819, 380);
+            this.btnAddToCartHChoc.Location = new System.Drawing.Point(819, 413);
             this.btnAddToCartHChoc.LongPressDurationMS = 1000;
             this.btnAddToCartHChoc.Name = "btnAddToCartHChoc";
             this.btnAddToCartHChoc.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -1715,7 +1735,7 @@
             this.btnAddToCartHLatte.IsReadOnly = false;
             this.btnAddToCartHLatte.IsToggleButton = false;
             this.btnAddToCartHLatte.IsToggled = false;
-            this.btnAddToCartHLatte.Location = new System.Drawing.Point(1073, 380);
+            this.btnAddToCartHLatte.Location = new System.Drawing.Point(1073, 413);
             this.btnAddToCartHLatte.LongPressDurationMS = 1000;
             this.btnAddToCartHLatte.Name = "btnAddToCartHLatte";
             this.btnAddToCartHLatte.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -1874,7 +1894,7 @@
             this.btnAddToCartSpaLattte.IsReadOnly = false;
             this.btnAddToCartSpaLattte.IsToggleButton = false;
             this.btnAddToCartSpaLattte.IsToggled = false;
-            this.btnAddToCartSpaLattte.Location = new System.Drawing.Point(1364, 380);
+            this.btnAddToCartSpaLattte.Location = new System.Drawing.Point(1364, 413);
             this.btnAddToCartSpaLattte.LongPressDurationMS = 1000;
             this.btnAddToCartSpaLattte.Name = "btnAddToCartSpaLattte";
             this.btnAddToCartSpaLattte.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -2033,7 +2053,7 @@
             this.btnAddToCartHMocLatte.IsReadOnly = false;
             this.btnAddToCartHMocLatte.IsToggleButton = false;
             this.btnAddToCartHMocLatte.IsToggled = false;
-            this.btnAddToCartHMocLatte.Location = new System.Drawing.Point(1657, 380);
+            this.btnAddToCartHMocLatte.Location = new System.Drawing.Point(1657, 413);
             this.btnAddToCartHMocLatte.LongPressDurationMS = 1000;
             this.btnAddToCartHMocLatte.Name = "btnAddToCartHMocLatte";
             this.btnAddToCartHMocLatte.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -2088,7 +2108,7 @@
             this.rbtnSmallIcedLatte.HoverCursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnSmallIcedLatte.IsContained = false;
             this.rbtnSmallIcedLatte.IsReadOnly = false;
-            this.rbtnSmallIcedLatte.Location = new System.Drawing.Point(245, 638);
+            this.rbtnSmallIcedLatte.Location = new System.Drawing.Point(245, 672);
             this.rbtnSmallIcedLatte.MinimumSize = new System.Drawing.Size(178, 24);
             this.rbtnSmallIcedLatte.Name = "rbtnSmallIcedLatte";
             this.rbtnSmallIcedLatte.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
@@ -2129,7 +2149,7 @@
             this.rbtnLargeIcedLatte.HoverCursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnLargeIcedLatte.IsContained = false;
             this.rbtnLargeIcedLatte.IsReadOnly = false;
-            this.rbtnLargeIcedLatte.Location = new System.Drawing.Point(245, 664);
+            this.rbtnLargeIcedLatte.Location = new System.Drawing.Point(245, 698);
             this.rbtnLargeIcedLatte.MinimumSize = new System.Drawing.Size(178, 24);
             this.rbtnLargeIcedLatte.Name = "rbtnLargeIcedLatte";
             this.rbtnLargeIcedLatte.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
@@ -2192,7 +2212,7 @@
             this.btnAddToCartIceLatte.IsReadOnly = false;
             this.btnAddToCartIceLatte.IsToggleButton = false;
             this.btnAddToCartIceLatte.IsToggled = false;
-            this.btnAddToCartIceLatte.Location = new System.Drawing.Point(245, 694);
+            this.btnAddToCartIceLatte.Location = new System.Drawing.Point(245, 758);
             this.btnAddToCartIceLatte.LongPressDurationMS = 1000;
             this.btnAddToCartIceLatte.Name = "btnAddToCartIceLatte";
             this.btnAddToCartIceLatte.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -2247,7 +2267,7 @@
             this.rbtnSmallIcedMochaLatte.HoverCursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnSmallIcedMochaLatte.IsContained = false;
             this.rbtnSmallIcedMochaLatte.IsReadOnly = false;
-            this.rbtnSmallIcedMochaLatte.Location = new System.Drawing.Point(550, 638);
+            this.rbtnSmallIcedMochaLatte.Location = new System.Drawing.Point(534, 672);
             this.rbtnSmallIcedMochaLatte.MinimumSize = new System.Drawing.Size(178, 24);
             this.rbtnSmallIcedMochaLatte.Name = "rbtnSmallIcedMochaLatte";
             this.rbtnSmallIcedMochaLatte.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
@@ -2288,7 +2308,7 @@
             this.rbtnLargeIcedMochaLatte.HoverCursor = System.Windows.Forms.Cursors.Hand;
             this.rbtnLargeIcedMochaLatte.IsContained = false;
             this.rbtnLargeIcedMochaLatte.IsReadOnly = false;
-            this.rbtnLargeIcedMochaLatte.Location = new System.Drawing.Point(550, 664);
+            this.rbtnLargeIcedMochaLatte.Location = new System.Drawing.Point(534, 698);
             this.rbtnLargeIcedMochaLatte.MinimumSize = new System.Drawing.Size(178, 24);
             this.rbtnLargeIcedMochaLatte.Name = "rbtnLargeIcedMochaLatte";
             this.rbtnLargeIcedMochaLatte.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
@@ -2351,7 +2371,7 @@
             this.btnAddToCartIcedMochLatte.IsReadOnly = false;
             this.btnAddToCartIcedMochLatte.IsToggleButton = false;
             this.btnAddToCartIcedMochLatte.IsToggled = false;
-            this.btnAddToCartIcedMochLatte.Location = new System.Drawing.Point(550, 694);
+            this.btnAddToCartIcedMochLatte.Location = new System.Drawing.Point(534, 758);
             this.btnAddToCartIcedMochLatte.LongPressDurationMS = 1000;
             this.btnAddToCartIcedMochLatte.Name = "btnAddToCartIcedMochLatte";
             this.btnAddToCartIcedMochLatte.NormalFontStyle = System.Drawing.FontStyle.Regular;
@@ -2379,11 +2399,348 @@
             this.btnAddToCartIcedMochLatte.UseParticles = false;
             this.btnAddToCartIcedMochLatte.Click += new System.EventHandler(this.btnAddToCartIcedMochLatte_Click);
             // 
+            // siticoneLabel10
+            // 
+            this.siticoneLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel10.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel10.Location = new System.Drawing.Point(245, 380);
+            this.siticoneLabel10.Name = "siticoneLabel10";
+            this.siticoneLabel10.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel10.TabIndex = 52;
+            this.siticoneLabel10.Text = "Quantity";
+            // 
+            // txtQuantityAmer
+            // 
+            this.txtQuantityAmer.BackColor = System.Drawing.Color.Transparent;
+            this.txtQuantityAmer.BackgroundColor = System.Drawing.Color.White;
+            this.txtQuantityAmer.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQuantityAmer.BottomLeftCornerRadius = 25;
+            this.txtQuantityAmer.BottomRightCornerRadius = 25;
+            this.txtQuantityAmer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantityAmer.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQuantityAmer.FocusImage = null;
+            this.txtQuantityAmer.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQuantityAmer.HoverImage = null;
+            this.txtQuantityAmer.IdleImage = null;
+            this.txtQuantityAmer.Location = new System.Drawing.Point(329, 377);
+            this.txtQuantityAmer.Name = "txtQuantityAmer";
+            this.txtQuantityAmer.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQuantityAmer.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQuantityAmer.PlaceholderText = "";
+            this.txtQuantityAmer.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQuantityAmer.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQuantityAmer.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQuantityAmer.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQuantityAmer.Size = new System.Drawing.Size(64, 27);
+            this.txtQuantityAmer.TabIndex = 53;
+            this.txtQuantityAmer.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQuantityAmer.TextContent = "";
+            this.txtQuantityAmer.TopLeftCornerRadius = 25;
+            this.txtQuantityAmer.TopRightCornerRadius = 25;
+            this.txtQuantityAmer.ValidationPattern = "";
+            this.txtQuantityAmer.TextContentChanged += new System.EventHandler(this.siticoneTextBoxAdvanced1_TextContentChanged);
+            // 
+            // txtQtyCapp
+            // 
+            this.txtQtyCapp.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyCapp.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyCapp.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyCapp.BottomLeftCornerRadius = 25;
+            this.txtQtyCapp.BottomRightCornerRadius = 25;
+            this.txtQtyCapp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyCapp.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyCapp.FocusImage = null;
+            this.txtQtyCapp.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyCapp.HoverImage = null;
+            this.txtQtyCapp.IdleImage = null;
+            this.txtQtyCapp.Location = new System.Drawing.Point(604, 378);
+            this.txtQtyCapp.Name = "txtQtyCapp";
+            this.txtQtyCapp.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyCapp.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyCapp.PlaceholderText = "";
+            this.txtQtyCapp.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyCapp.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyCapp.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyCapp.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyCapp.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyCapp.TabIndex = 55;
+            this.txtQtyCapp.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyCapp.TextContent = "";
+            this.txtQtyCapp.TopLeftCornerRadius = 25;
+            this.txtQtyCapp.TopRightCornerRadius = 25;
+            this.txtQtyCapp.ValidationPattern = "";
+            // 
+            // siticoneLabel11
+            // 
+            this.siticoneLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel11.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel11.Location = new System.Drawing.Point(520, 381);
+            this.siticoneLabel11.Name = "siticoneLabel11";
+            this.siticoneLabel11.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel11.TabIndex = 54;
+            this.siticoneLabel11.Text = "Quantity";
+            // 
+            // txtQuantityHChoc
+            // 
+            this.txtQuantityHChoc.BackColor = System.Drawing.Color.Transparent;
+            this.txtQuantityHChoc.BackgroundColor = System.Drawing.Color.White;
+            this.txtQuantityHChoc.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQuantityHChoc.BottomLeftCornerRadius = 25;
+            this.txtQuantityHChoc.BottomRightCornerRadius = 25;
+            this.txtQuantityHChoc.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQuantityHChoc.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQuantityHChoc.FocusImage = null;
+            this.txtQuantityHChoc.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQuantityHChoc.HoverImage = null;
+            this.txtQuantityHChoc.IdleImage = null;
+            this.txtQuantityHChoc.Location = new System.Drawing.Point(900, 378);
+            this.txtQuantityHChoc.Name = "txtQuantityHChoc";
+            this.txtQuantityHChoc.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQuantityHChoc.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQuantityHChoc.PlaceholderText = "";
+            this.txtQuantityHChoc.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQuantityHChoc.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQuantityHChoc.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQuantityHChoc.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQuantityHChoc.Size = new System.Drawing.Size(64, 27);
+            this.txtQuantityHChoc.TabIndex = 57;
+            this.txtQuantityHChoc.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQuantityHChoc.TextContent = "";
+            this.txtQuantityHChoc.TopLeftCornerRadius = 25;
+            this.txtQuantityHChoc.TopRightCornerRadius = 25;
+            this.txtQuantityHChoc.ValidationPattern = "";
+            // 
+            // siticoneLabel12
+            // 
+            this.siticoneLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel12.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel12.Location = new System.Drawing.Point(816, 381);
+            this.siticoneLabel12.Name = "siticoneLabel12";
+            this.siticoneLabel12.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel12.TabIndex = 56;
+            this.siticoneLabel12.Text = "Quantity";
+            // 
+            // txtQtyHLatte
+            // 
+            this.txtQtyHLatte.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyHLatte.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyHLatte.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyHLatte.BottomLeftCornerRadius = 25;
+            this.txtQtyHLatte.BottomRightCornerRadius = 25;
+            this.txtQtyHLatte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyHLatte.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyHLatte.FocusImage = null;
+            this.txtQtyHLatte.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyHLatte.HoverImage = null;
+            this.txtQtyHLatte.IdleImage = null;
+            this.txtQtyHLatte.Location = new System.Drawing.Point(1151, 377);
+            this.txtQtyHLatte.Name = "txtQtyHLatte";
+            this.txtQtyHLatte.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyHLatte.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyHLatte.PlaceholderText = "";
+            this.txtQtyHLatte.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyHLatte.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyHLatte.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyHLatte.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyHLatte.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyHLatte.TabIndex = 59;
+            this.txtQtyHLatte.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyHLatte.TextContent = "";
+            this.txtQtyHLatte.TopLeftCornerRadius = 25;
+            this.txtQtyHLatte.TopRightCornerRadius = 25;
+            this.txtQtyHLatte.ValidationPattern = "";
+            // 
+            // siticoneLabel13
+            // 
+            this.siticoneLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel13.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel13.Location = new System.Drawing.Point(1067, 380);
+            this.siticoneLabel13.Name = "siticoneLabel13";
+            this.siticoneLabel13.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel13.TabIndex = 58;
+            this.siticoneLabel13.Text = "Quantity";
+            // 
+            // txtQtySpaLatte
+            // 
+            this.txtQtySpaLatte.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtySpaLatte.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtySpaLatte.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtySpaLatte.BottomLeftCornerRadius = 25;
+            this.txtQtySpaLatte.BottomRightCornerRadius = 25;
+            this.txtQtySpaLatte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtySpaLatte.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtySpaLatte.FocusImage = null;
+            this.txtQtySpaLatte.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtySpaLatte.HoverImage = null;
+            this.txtQtySpaLatte.IdleImage = null;
+            this.txtQtySpaLatte.Location = new System.Drawing.Point(1440, 377);
+            this.txtQtySpaLatte.Name = "txtQtySpaLatte";
+            this.txtQtySpaLatte.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtySpaLatte.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtySpaLatte.PlaceholderText = "";
+            this.txtQtySpaLatte.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtySpaLatte.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtySpaLatte.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtySpaLatte.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtySpaLatte.Size = new System.Drawing.Size(64, 27);
+            this.txtQtySpaLatte.TabIndex = 61;
+            this.txtQtySpaLatte.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtySpaLatte.TextContent = "";
+            this.txtQtySpaLatte.TopLeftCornerRadius = 25;
+            this.txtQtySpaLatte.TopRightCornerRadius = 25;
+            this.txtQtySpaLatte.ValidationPattern = "";
+            // 
+            // siticoneLabel14
+            // 
+            this.siticoneLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel14.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel14.Location = new System.Drawing.Point(1356, 380);
+            this.siticoneLabel14.Name = "siticoneLabel14";
+            this.siticoneLabel14.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel14.TabIndex = 60;
+            this.siticoneLabel14.Text = "Quantity";
+            // 
+            // txtQtyHMochaLatte
+            // 
+            this.txtQtyHMochaLatte.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyHMochaLatte.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyHMochaLatte.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyHMochaLatte.BottomLeftCornerRadius = 25;
+            this.txtQtyHMochaLatte.BottomRightCornerRadius = 25;
+            this.txtQtyHMochaLatte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyHMochaLatte.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyHMochaLatte.FocusImage = null;
+            this.txtQtyHMochaLatte.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyHMochaLatte.HoverImage = null;
+            this.txtQtyHMochaLatte.IdleImage = null;
+            this.txtQtyHMochaLatte.Location = new System.Drawing.Point(1738, 378);
+            this.txtQtyHMochaLatte.Name = "txtQtyHMochaLatte";
+            this.txtQtyHMochaLatte.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyHMochaLatte.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyHMochaLatte.PlaceholderText = "";
+            this.txtQtyHMochaLatte.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyHMochaLatte.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyHMochaLatte.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyHMochaLatte.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyHMochaLatte.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyHMochaLatte.TabIndex = 63;
+            this.txtQtyHMochaLatte.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyHMochaLatte.TextContent = "";
+            this.txtQtyHMochaLatte.TopLeftCornerRadius = 25;
+            this.txtQtyHMochaLatte.TopRightCornerRadius = 25;
+            this.txtQtyHMochaLatte.ValidationPattern = "";
+            // 
+            // siticoneLabel15
+            // 
+            this.siticoneLabel15.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel15.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel15.Location = new System.Drawing.Point(1654, 381);
+            this.siticoneLabel15.Name = "siticoneLabel15";
+            this.siticoneLabel15.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel15.TabIndex = 62;
+            this.siticoneLabel15.Text = "Quantity";
+            // 
+            // txtQtyIcedLatte
+            // 
+            this.txtQtyIcedLatte.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyIcedLatte.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyIcedLatte.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyIcedLatte.BottomLeftCornerRadius = 25;
+            this.txtQtyIcedLatte.BottomRightCornerRadius = 25;
+            this.txtQtyIcedLatte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyIcedLatte.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyIcedLatte.FocusImage = null;
+            this.txtQtyIcedLatte.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyIcedLatte.HoverImage = null;
+            this.txtQtyIcedLatte.IdleImage = null;
+            this.txtQtyIcedLatte.Location = new System.Drawing.Point(329, 725);
+            this.txtQtyIcedLatte.Name = "txtQtyIcedLatte";
+            this.txtQtyIcedLatte.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyIcedLatte.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyIcedLatte.PlaceholderText = "";
+            this.txtQtyIcedLatte.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyIcedLatte.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyIcedLatte.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyIcedLatte.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyIcedLatte.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyIcedLatte.TabIndex = 65;
+            this.txtQtyIcedLatte.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyIcedLatte.TextContent = "";
+            this.txtQtyIcedLatte.TopLeftCornerRadius = 25;
+            this.txtQtyIcedLatte.TopRightCornerRadius = 25;
+            this.txtQtyIcedLatte.ValidationPattern = "";
+            // 
+            // siticoneLabel16
+            // 
+            this.siticoneLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel16.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel16.Location = new System.Drawing.Point(245, 728);
+            this.siticoneLabel16.Name = "siticoneLabel16";
+            this.siticoneLabel16.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel16.TabIndex = 64;
+            this.siticoneLabel16.Text = "Quantity";
+            // 
+            // txtQtyIcedMochaLatte
+            // 
+            this.txtQtyIcedMochaLatte.BackColor = System.Drawing.Color.Transparent;
+            this.txtQtyIcedMochaLatte.BackgroundColor = System.Drawing.Color.White;
+            this.txtQtyIcedMochaLatte.BorderColor = System.Drawing.Color.DarkGray;
+            this.txtQtyIcedMochaLatte.BottomLeftCornerRadius = 25;
+            this.txtQtyIcedMochaLatte.BottomRightCornerRadius = 25;
+            this.txtQtyIcedMochaLatte.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQtyIcedMochaLatte.FocusBorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtQtyIcedMochaLatte.FocusImage = null;
+            this.txtQtyIcedMochaLatte.HoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQtyIcedMochaLatte.HoverImage = null;
+            this.txtQtyIcedMochaLatte.IdleImage = null;
+            this.txtQtyIcedMochaLatte.Location = new System.Drawing.Point(618, 725);
+            this.txtQtyIcedMochaLatte.Name = "txtQtyIcedMochaLatte";
+            this.txtQtyIcedMochaLatte.PlaceholderColor = System.Drawing.Color.Gray;
+            this.txtQtyIcedMochaLatte.PlaceholderFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtQtyIcedMochaLatte.PlaceholderText = "";
+            this.txtQtyIcedMochaLatte.ReadOnlyColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
+            this.txtQtyIcedMochaLatte.ReadOnlyColors.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.txtQtyIcedMochaLatte.ReadOnlyColors.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.txtQtyIcedMochaLatte.ReadOnlyColors.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.txtQtyIcedMochaLatte.Size = new System.Drawing.Size(64, 27);
+            this.txtQtyIcedMochaLatte.TabIndex = 67;
+            this.txtQtyIcedMochaLatte.TextColor = System.Drawing.SystemColors.WindowText;
+            this.txtQtyIcedMochaLatte.TextContent = "";
+            this.txtQtyIcedMochaLatte.TopLeftCornerRadius = 25;
+            this.txtQtyIcedMochaLatte.TopRightCornerRadius = 25;
+            this.txtQtyIcedMochaLatte.ValidationPattern = "";
+            // 
+            // siticoneLabel17
+            // 
+            this.siticoneLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel17.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel17.Location = new System.Drawing.Point(534, 728);
+            this.siticoneLabel17.Name = "siticoneLabel17";
+            this.siticoneLabel17.Size = new System.Drawing.Size(105, 23);
+            this.siticoneLabel17.TabIndex = 66;
+            this.siticoneLabel17.Text = "Quantity";
+            // 
             // Coffee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.txtQtyIcedMochaLatte);
+            this.Controls.Add(this.siticoneLabel17);
+            this.Controls.Add(this.txtQtyIcedLatte);
+            this.Controls.Add(this.siticoneLabel16);
+            this.Controls.Add(this.txtQtyHMochaLatte);
+            this.Controls.Add(this.siticoneLabel15);
+            this.Controls.Add(this.txtQtySpaLatte);
+            this.Controls.Add(this.siticoneLabel14);
+            this.Controls.Add(this.txtQtyHLatte);
+            this.Controls.Add(this.siticoneLabel13);
+            this.Controls.Add(this.txtQuantityHChoc);
+            this.Controls.Add(this.siticoneLabel12);
+            this.Controls.Add(this.txtQtyCapp);
+            this.Controls.Add(this.siticoneLabel11);
+            this.Controls.Add(this.txtQuantityAmer);
+            this.Controls.Add(this.siticoneLabel10);
             this.Controls.Add(this.rbtnSmallIcedMochaLatte);
             this.Controls.Add(this.rbtnLargeIcedMochaLatte);
             this.Controls.Add(this.btnAddToCartIcedMochLatte);
@@ -2426,8 +2783,9 @@
             this.Controls.Add(this.siticonePanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Coffee";
-            this.Text = " ";
+            this.Text = " Cofffee";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Coffee_Load);
             this.siticonePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2482,5 +2840,21 @@
         private SiticoneNetFrameworkUI.SiticoneRadioButton rbtnSmallIcedMochaLatte;
         private SiticoneNetFrameworkUI.SiticoneRadioButton rbtnLargeIcedMochaLatte;
         private SiticoneNetFrameworkUI.SiticoneButton btnAddToCartIcedMochLatte;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel10;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQuantityAmer;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyCapp;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel11;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQuantityHChoc;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel12;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyHLatte;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel13;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtySpaLatte;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel14;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyHMochaLatte;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel15;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyIcedLatte;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel16;
+        private SiticoneNetFrameworkUI.SiticoneTextBoxAdvanced txtQtyIcedMochaLatte;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel17;
     }
 }

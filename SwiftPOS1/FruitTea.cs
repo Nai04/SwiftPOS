@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace SwiftPOS1
 {
-    public partial class MilkTea : Form
+    public partial class FruitTea : Form
     {
-        public MilkTea()
+        public FruitTea()
         {
             InitializeComponent();
         }
 
-        // size classs
 
+        //size class
         private bool TryGetSize(SiticoneRadioButton smallBtn, SiticoneRadioButton largeBtn, out string size)
         {
             size = "";
@@ -40,7 +40,7 @@ namespace SwiftPOS1
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
-        // quantity class/logic
+        //quantity class/logic
         private bool TryGetQty(SiticoneTextBoxAdvanced qtyBox, out int qty)
         {
             qty = 0;
@@ -70,7 +70,7 @@ namespace SwiftPOS1
 
             return true;
         }
-        // Add to cart logic/cass
+        // Add to cart logic/class
         private void AddDrinkToCart(
             string itemName,
             SiticoneRadioButton smallBtn,
@@ -99,12 +99,14 @@ namespace SwiftPOS1
         }
 
         //navigation
+        private void btnMenu_Click(object sender, EventArgs e) => GoTo(new Menu());
+        
+
+        
 
         private void btnCoffee_Click(object sender, EventArgs e) => GoTo(new Coffee());
 
-        private void btnMenu_Click(object sender, EventArgs e) => GoTo(new Menu());
-
-        private void btnFruitTea_Click(object sender, EventArgs e) => GoTo(new FruitTea());
+        private void btnMilktea_Click(object sender, EventArgs e) => GoTo(new MilkTea());
 
         private void btnCart_Click(object sender, EventArgs e) => GoTo(new Cart());
 
@@ -113,40 +115,39 @@ namespace SwiftPOS1
         private void btnPastry_Click(object sender, EventArgs e) => GoTo(new Pastry());
 
         //add to cart buttons
-
         private void btnAddToCartAmer_Click(object sender, EventArgs e)
         {
-            AddDrinkToCart("Wintermelon", rbtnSmallWinter, rbtnLargeWinter, txtQtyWinter, 89m, 99m);
+            AddDrinkToCart("Green Apple", rbtnSmallGApple, rbtnLargeGApple, txtQtyGApple, 89m, 99m);
         }
 
-        private void btnAddtoCartOki_Click(object sender, EventArgs e)
+        private void btnAddToCartStrawberry_Click(object sender, EventArgs e)
         {
-            AddDrinkToCart("Okinawa", rbtnSmallOki, rbtnLargeOki, txtQtyOkinawa, 89m, 99m);
+            AddDrinkToCart("Strawberry", rbtnSmallStrawberry, rbtnLargeStrawberry, txtQtyStrawberry, 89m, 99m);
         }
 
-        private void btnAddtoCartCandC_Click(object sender, EventArgs e)
+        private void btnAddToCartBlueberry_Click(object sender, EventArgs e)
         {
-            AddDrinkToCart("Cookies and Cream", rbtnSmallCandC, rbtnLargeCandC, txtQtyCandC, 89m, 99m);
+            AddDrinkToCart("Blueberry", rbtnSmallBlueberry, rbtnLargeBlueberry, txtQtyBlueberry, 89m, 99m);
         }
 
-        private void btnAddtoCartSaltCarm_Click(object sender, EventArgs e)
+        private void btnAddToCartMango_Click(object sender, EventArgs e)
         {
-            AddDrinkToCart("Salted Caramel", rbtnSmallSaltCarm, rbtnLargeSaltCarm, txtQtySaltCarm, 89m, 99m);
+            AddDrinkToCart("Mango", rbtnSmallMango, rbtnLargeMango, txtQtyMango, 89m, 99m);
         }
 
-        private void btnAddtoCartHokaido_Click(object sender, EventArgs e)
+        private void btnAddToCartPeach_Click(object sender, EventArgs e)
         {
-            AddDrinkToCart("Hokkaido", rbtnSmallHokaido, rbtnLargeHokaido, txtQtyHokk, 89m, 99m);
+            AddDrinkToCart("Peach", rbtnSmallPeach, rbtnLargePeach, txtQtyPeach, 89m, 99m);
         }
 
-        private void btnAddtoCartThai_Click(object sender, EventArgs e)
+        private void btnAddToCartLychee_Click(object sender, EventArgs e)
         {
-            AddDrinkToCart("Thai", rbtnSmallThai, rbtnLargeThai, txtQtyThai, 89m, 99m);
+            AddDrinkToCart("Lychee", rbtnSmallLychee, rbtnLargeLychee, txtQtyLychee, 89m, 99m);
         }
 
-        private void btnAddtoCartMatcha_Click(object sender, EventArgs e)
+        private void txtQtyCapp_TextContentChanged(object sender, EventArgs e)
         {
-            AddDrinkToCart("Matcha", rbtnSmallMatcha, rbtnLargeMatcha, txtQtyMatcha, 89m, 99m);
+
         }
     }
 }

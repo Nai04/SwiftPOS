@@ -35,12 +35,32 @@
             this.btnMenu = new SiticoneNetFrameworkUI.SiticoneButton();
             this.btnInventory = new SiticoneNetFrameworkUI.SiticoneButton();
             this.btnSales = new SiticoneNetFrameworkUI.SiticoneButton();
+            this.dgvCart = new System.Windows.Forms.DataGridView();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siticoneLabel2 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.lblGrandTotal = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.btnPrint = new SiticoneNetFrameworkUI.SiticoneButton();
+            this.btnDiscard = new SiticoneNetFrameworkUI.SiticoneButton();
+            this.siticonePanel2 = new SiticoneNetFrameworkUI.SiticonePanel();
+            this.siticoneRadioButton1 = new SiticoneNetFrameworkUI.SiticoneRadioButton();
+            this.siticoneRadioButton2 = new SiticoneNetFrameworkUI.SiticoneRadioButton();
+            this.siticoneRadioButton3 = new SiticoneNetFrameworkUI.SiticoneRadioButton();
+            this.siticoneRadioButton4 = new SiticoneNetFrameworkUI.SiticoneRadioButton();
+            this.siticoneLabel3 = new SiticoneNetFrameworkUI.SiticoneLabel();
             this.siticonePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
+            this.siticonePanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // siticonePanel1
             // 
             this.siticonePanel1.AcrylicTintColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.siticonePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.siticonePanel1.BackColor = System.Drawing.Color.Transparent;
             this.siticonePanel1.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
             this.siticonePanel1.BorderDashPattern = null;
@@ -484,16 +504,474 @@
             this.btnSales.UseAdvancedRendering = true;
             this.btnSales.UseParticles = false;
             // 
+            // dgvCart
+            // 
+            this.dgvCart.AllowUserToAddRows = false;
+            this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Item,
+            this.Size,
+            this.Price,
+            this.Qty,
+            this.Total});
+            this.dgvCart.Location = new System.Drawing.Point(379, 62);
+            this.dgvCart.Name = "dgvCart";
+            this.dgvCart.ReadOnly = true;
+            this.dgvCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvCart.Size = new System.Drawing.Size(493, 470);
+            this.dgvCart.TabIndex = 4;
+            // 
+            // Item
+            // 
+            this.Item.DataPropertyName = "ItemName";
+            this.Item.HeaderText = "Item";
+            this.Item.Name = "Item";
+            this.Item.ReadOnly = true;
+            // 
+            // Size
+            // 
+            this.Size.DataPropertyName = "Size";
+            this.Size.HeaderText = "Size";
+            this.Size.Name = "Size";
+            this.Size.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Qty
+            // 
+            this.Qty.DataPropertyName = "Qty";
+            this.Qty.HeaderText = "Quantity";
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.DataPropertyName = "Total";
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // siticoneLabel2
+            // 
+            this.siticoneLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel2.Location = new System.Drawing.Point(379, 544);
+            this.siticoneLabel2.Name = "siticoneLabel2";
+            this.siticoneLabel2.Size = new System.Drawing.Size(100, 23);
+            this.siticoneLabel2.TabIndex = 5;
+            this.siticoneLabel2.Text = "Total: ";
+            // 
+            // lblGrandTotal
+            // 
+            this.lblGrandTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblGrandTotal.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrandTotal.Location = new System.Drawing.Point(432, 545);
+            this.lblGrandTotal.Name = "lblGrandTotal";
+            this.lblGrandTotal.Size = new System.Drawing.Size(100, 23);
+            this.lblGrandTotal.TabIndex = 6;
+            this.lblGrandTotal.Text = "00.00";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard" +
+    "";
+            this.btnPrint.AccessibleName = "Check Out";
+            this.btnPrint.AutoSizeBasedOnText = false;
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.BadgeBackColor = System.Drawing.Color.Black;
+            this.btnPrint.BadgeFont = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnPrint.BadgeValue = 0;
+            this.btnPrint.BadgeValueForeColor = System.Drawing.Color.White;
+            this.btnPrint.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnPrint.BorderWidth = 2;
+            this.btnPrint.ButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnPrint.ButtonImage = null;
+            this.btnPrint.ButtonTextLeftPadding = 0;
+            this.btnPrint.CanBeep = true;
+            this.btnPrint.CanGlow = false;
+            this.btnPrint.CanShake = true;
+            this.btnPrint.ContextMenuStripEx = null;
+            this.btnPrint.CornerRadiusBottomLeft = 17;
+            this.btnPrint.CornerRadiusBottomRight = 17;
+            this.btnPrint.CornerRadiusTopLeft = 17;
+            this.btnPrint.CornerRadiusTopRight = 17;
+            this.btnPrint.CustomCursor = System.Windows.Forms.Cursors.Default;
+            this.btnPrint.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.btnPrint.EnableLongPress = false;
+            this.btnPrint.EnableRippleEffect = true;
+            this.btnPrint.EnableShadow = false;
+            this.btnPrint.EnableTextWrapping = false;
+            this.btnPrint.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPrint.GlowIntensity = 100;
+            this.btnPrint.GlowRadius = 20F;
+            this.btnPrint.GradientBackground = false;
+            this.btnPrint.GradientColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(227)))), ((int)(((byte)(64)))));
+            this.btnPrint.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnPrint.HintText = null;
+            this.btnPrint.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnPrint.HoverFontStyle = System.Drawing.FontStyle.Regular;
+            this.btnPrint.HoverTextColor = System.Drawing.Color.White;
+            this.btnPrint.HoverTransitionDuration = 250;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.ImagePadding = 5;
+            this.btnPrint.ImageSize = new System.Drawing.Size(16, 16);
+            this.btnPrint.IsRadial = true;
+            this.btnPrint.IsReadOnly = false;
+            this.btnPrint.IsToggleButton = false;
+            this.btnPrint.IsToggled = false;
+            this.btnPrint.Location = new System.Drawing.Point(714, 538);
+            this.btnPrint.LongPressDurationMS = 1000;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.NormalFontStyle = System.Drawing.FontStyle.Regular;
+            this.btnPrint.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnPrint.ParticleCount = 15;
+            this.btnPrint.PressAnimationScale = 0.97F;
+            this.btnPrint.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnPrint.PressedFontStyle = System.Drawing.FontStyle.Regular;
+            this.btnPrint.PressTransitionDuration = 150;
+            this.btnPrint.ReadOnlyTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnPrint.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnPrint.RippleRadiusMultiplier = 0.6F;
+            this.btnPrint.ShadowBlur = 5;
+            this.btnPrint.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPrint.ShadowOffset = new System.Drawing.Point(0, 2);
+            this.btnPrint.ShakeDuration = 500;
+            this.btnPrint.ShakeIntensity = 5;
+            this.btnPrint.Size = new System.Drawing.Size(158, 39);
+            this.btnPrint.TabIndex = 28;
+            this.btnPrint.Text = "Check Out";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrint.TextColor = System.Drawing.Color.White;
+            this.btnPrint.TooltipText = null;
+            this.btnPrint.UseAdvancedRendering = true;
+            this.btnPrint.UseParticles = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnDiscard
+            // 
+            this.btnDiscard.AccessibleDescription = "The default button control that accept input though the mouse, touch and keyboard" +
+    "";
+            this.btnDiscard.AccessibleName = "Discard";
+            this.btnDiscard.AutoSizeBasedOnText = false;
+            this.btnDiscard.BackColor = System.Drawing.Color.Transparent;
+            this.btnDiscard.BadgeBackColor = System.Drawing.Color.Black;
+            this.btnDiscard.BadgeFont = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnDiscard.BadgeValue = 0;
+            this.btnDiscard.BadgeValueForeColor = System.Drawing.Color.White;
+            this.btnDiscard.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnDiscard.BorderWidth = 2;
+            this.btnDiscard.ButtonBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnDiscard.ButtonImage = null;
+            this.btnDiscard.ButtonTextLeftPadding = 0;
+            this.btnDiscard.CanBeep = true;
+            this.btnDiscard.CanGlow = false;
+            this.btnDiscard.CanShake = true;
+            this.btnDiscard.ContextMenuStripEx = null;
+            this.btnDiscard.CornerRadiusBottomLeft = 17;
+            this.btnDiscard.CornerRadiusBottomRight = 17;
+            this.btnDiscard.CornerRadiusTopLeft = 17;
+            this.btnDiscard.CornerRadiusTopRight = 17;
+            this.btnDiscard.CustomCursor = System.Windows.Forms.Cursors.Default;
+            this.btnDiscard.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.btnDiscard.EnableLongPress = false;
+            this.btnDiscard.EnableRippleEffect = true;
+            this.btnDiscard.EnableShadow = false;
+            this.btnDiscard.EnableTextWrapping = false;
+            this.btnDiscard.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiscard.GlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnDiscard.GlowIntensity = 100;
+            this.btnDiscard.GlowRadius = 20F;
+            this.btnDiscard.GradientBackground = false;
+            this.btnDiscard.GradientColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(227)))), ((int)(((byte)(64)))));
+            this.btnDiscard.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnDiscard.HintText = null;
+            this.btnDiscard.HoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnDiscard.HoverFontStyle = System.Drawing.FontStyle.Regular;
+            this.btnDiscard.HoverTextColor = System.Drawing.Color.White;
+            this.btnDiscard.HoverTransitionDuration = 250;
+            this.btnDiscard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDiscard.ImagePadding = 5;
+            this.btnDiscard.ImageSize = new System.Drawing.Size(16, 16);
+            this.btnDiscard.IsRadial = true;
+            this.btnDiscard.IsReadOnly = false;
+            this.btnDiscard.IsToggleButton = false;
+            this.btnDiscard.IsToggled = false;
+            this.btnDiscard.Location = new System.Drawing.Point(714, 583);
+            this.btnDiscard.LongPressDurationMS = 1000;
+            this.btnDiscard.Name = "btnDiscard";
+            this.btnDiscard.NormalFontStyle = System.Drawing.FontStyle.Regular;
+            this.btnDiscard.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnDiscard.ParticleCount = 15;
+            this.btnDiscard.PressAnimationScale = 0.97F;
+            this.btnDiscard.PressedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnDiscard.PressedFontStyle = System.Drawing.FontStyle.Regular;
+            this.btnDiscard.PressTransitionDuration = 150;
+            this.btnDiscard.ReadOnlyTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnDiscard.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnDiscard.RippleRadiusMultiplier = 0.6F;
+            this.btnDiscard.ShadowBlur = 5;
+            this.btnDiscard.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDiscard.ShadowOffset = new System.Drawing.Point(0, 2);
+            this.btnDiscard.ShakeDuration = 500;
+            this.btnDiscard.ShakeIntensity = 5;
+            this.btnDiscard.Size = new System.Drawing.Size(158, 39);
+            this.btnDiscard.TabIndex = 29;
+            this.btnDiscard.Text = "Discard";
+            this.btnDiscard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDiscard.TextColor = System.Drawing.Color.White;
+            this.btnDiscard.TooltipText = null;
+            this.btnDiscard.UseAdvancedRendering = true;
+            this.btnDiscard.UseParticles = false;
+            this.btnDiscard.Click += new System.EventHandler(this.btnDiscard_Click);
+            // 
+            // siticonePanel2
+            // 
+            this.siticonePanel2.AcrylicTintColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.siticonePanel2.BackColor = System.Drawing.Color.Transparent;
+            this.siticonePanel2.BorderAlignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            this.siticonePanel2.BorderDashPattern = null;
+            this.siticonePanel2.BorderGradientEndColor = System.Drawing.Color.SeaGreen;
+            this.siticonePanel2.BorderGradientStartColor = System.Drawing.Color.ForestGreen;
+            this.siticonePanel2.BorderThickness = 2F;
+            this.siticonePanel2.Controls.Add(this.siticoneRadioButton4);
+            this.siticonePanel2.Controls.Add(this.siticoneRadioButton3);
+            this.siticonePanel2.Controls.Add(this.siticoneRadioButton2);
+            this.siticonePanel2.Controls.Add(this.siticoneRadioButton1);
+            this.siticonePanel2.CornerRadiusBottomLeft = 40F;
+            this.siticonePanel2.CornerRadiusBottomRight = 40F;
+            this.siticonePanel2.CornerRadiusTopLeft = 40F;
+            this.siticonePanel2.CornerRadiusTopRight = 40F;
+            this.siticonePanel2.EnableAcrylicEffect = false;
+            this.siticonePanel2.EnableMicaEffect = false;
+            this.siticonePanel2.EnableRippleEffect = false;
+            this.siticonePanel2.FillColor = System.Drawing.Color.DarkSeaGreen;
+            this.siticonePanel2.GradientColors = new System.Drawing.Color[] {
+        System.Drawing.Color.White,
+        System.Drawing.Color.LightGray,
+        System.Drawing.Color.Gray};
+            this.siticonePanel2.GradientPositions = new float[] {
+        0F,
+        0.5F,
+        1F};
+            this.siticonePanel2.Location = new System.Drawing.Point(907, 198);
+            this.siticonePanel2.Name = "siticonePanel2";
+            this.siticonePanel2.PatternStyle = System.Drawing.Drawing2D.HatchStyle.LargeGrid;
+            this.siticonePanel2.RippleAlpha = 50;
+            this.siticonePanel2.RippleAlphaDecrement = 3;
+            this.siticonePanel2.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.siticonePanel2.RippleMaxSize = 600F;
+            this.siticonePanel2.RippleSpeed = 15F;
+            this.siticonePanel2.ShowBorder = true;
+            this.siticonePanel2.Size = new System.Drawing.Size(349, 334);
+            this.siticonePanel2.TabIndex = 30;
+            this.siticonePanel2.TabStop = true;
+            this.siticonePanel2.TrackSystemTheme = false;
+            this.siticonePanel2.UseBorderGradient = true;
+            this.siticonePanel2.UseMultiGradient = false;
+            this.siticonePanel2.UsePatternTexture = false;
+            this.siticonePanel2.UseRadialGradient = false;
+            // 
+            // siticoneRadioButton1
+            // 
+            this.siticoneRadioButton1.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
+            this.siticoneRadioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneRadioButton1.CanBeep = true;
+            this.siticoneRadioButton1.CanShake = true;
+            this.siticoneRadioButton1.Checked = false;
+            this.siticoneRadioButton1.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.siticoneRadioButton1.ContainerBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton1.ContainerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton1.ContainerBorderWidth = 1;
+            this.siticoneRadioButton1.ContainerBottomLeftRadius = 8;
+            this.siticoneRadioButton1.ContainerBottomRightRadius = 8;
+            this.siticoneRadioButton1.ContainerCheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton1.ContainerCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton1.ContainerCheckedHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton1.ContainerCheckedPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton1.ContainerHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton1.ContainerPadding = 8;
+            this.siticoneRadioButton1.ContainerPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton1.ContainerTopLeftRadius = 8;
+            this.siticoneRadioButton1.ContainerTopRightRadius = 8;
+            this.siticoneRadioButton1.EnableRipple = false;
+            this.siticoneRadioButton1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneRadioButton1.HoverCursor = System.Windows.Forms.Cursors.Hand;
+            this.siticoneRadioButton1.IsContained = false;
+            this.siticoneRadioButton1.IsReadOnly = false;
+            this.siticoneRadioButton1.Location = new System.Drawing.Point(36, 41);
+            this.siticoneRadioButton1.MinimumSize = new System.Drawing.Size(178, 32);
+            this.siticoneRadioButton1.Name = "siticoneRadioButton1";
+            this.siticoneRadioButton1.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.siticoneRadioButton1.RippleDuration = 0.5F;
+            this.siticoneRadioButton1.RippleStyle = SiticoneNetFrameworkUI.SiticoneRadioButton.RippleAnimationStyle.Standard;
+            this.siticoneRadioButton1.ShakeDuration = 0.5F;
+            this.siticoneRadioButton1.Size = new System.Drawing.Size(178, 32);
+            this.siticoneRadioButton1.TabIndex = 33;
+            this.siticoneRadioButton1.Text = "Gcash";
+            this.siticoneRadioButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.siticoneRadioButton1.ToolTipText = "";
+            this.siticoneRadioButton1.UncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            // 
+            // siticoneRadioButton2
+            // 
+            this.siticoneRadioButton2.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
+            this.siticoneRadioButton2.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneRadioButton2.CanBeep = true;
+            this.siticoneRadioButton2.CanShake = true;
+            this.siticoneRadioButton2.Checked = false;
+            this.siticoneRadioButton2.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.siticoneRadioButton2.ContainerBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton2.ContainerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton2.ContainerBorderWidth = 1;
+            this.siticoneRadioButton2.ContainerBottomLeftRadius = 8;
+            this.siticoneRadioButton2.ContainerBottomRightRadius = 8;
+            this.siticoneRadioButton2.ContainerCheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton2.ContainerCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton2.ContainerCheckedHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton2.ContainerCheckedPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton2.ContainerHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton2.ContainerPadding = 8;
+            this.siticoneRadioButton2.ContainerPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton2.ContainerTopLeftRadius = 8;
+            this.siticoneRadioButton2.ContainerTopRightRadius = 8;
+            this.siticoneRadioButton2.EnableRipple = false;
+            this.siticoneRadioButton2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneRadioButton2.HoverCursor = System.Windows.Forms.Cursors.Hand;
+            this.siticoneRadioButton2.IsContained = false;
+            this.siticoneRadioButton2.IsReadOnly = false;
+            this.siticoneRadioButton2.Location = new System.Drawing.Point(36, 110);
+            this.siticoneRadioButton2.MinimumSize = new System.Drawing.Size(178, 32);
+            this.siticoneRadioButton2.Name = "siticoneRadioButton2";
+            this.siticoneRadioButton2.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.siticoneRadioButton2.RippleDuration = 0.5F;
+            this.siticoneRadioButton2.RippleStyle = SiticoneNetFrameworkUI.SiticoneRadioButton.RippleAnimationStyle.Standard;
+            this.siticoneRadioButton2.ShakeDuration = 0.5F;
+            this.siticoneRadioButton2.Size = new System.Drawing.Size(178, 32);
+            this.siticoneRadioButton2.TabIndex = 34;
+            this.siticoneRadioButton2.Text = "PayMaya";
+            this.siticoneRadioButton2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.siticoneRadioButton2.ToolTipText = "";
+            this.siticoneRadioButton2.UncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            // 
+            // siticoneRadioButton3
+            // 
+            this.siticoneRadioButton3.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
+            this.siticoneRadioButton3.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneRadioButton3.CanBeep = true;
+            this.siticoneRadioButton3.CanShake = true;
+            this.siticoneRadioButton3.Checked = false;
+            this.siticoneRadioButton3.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.siticoneRadioButton3.ContainerBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton3.ContainerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton3.ContainerBorderWidth = 1;
+            this.siticoneRadioButton3.ContainerBottomLeftRadius = 8;
+            this.siticoneRadioButton3.ContainerBottomRightRadius = 8;
+            this.siticoneRadioButton3.ContainerCheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton3.ContainerCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton3.ContainerCheckedHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton3.ContainerCheckedPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton3.ContainerHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton3.ContainerPadding = 8;
+            this.siticoneRadioButton3.ContainerPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton3.ContainerTopLeftRadius = 8;
+            this.siticoneRadioButton3.ContainerTopRightRadius = 8;
+            this.siticoneRadioButton3.EnableRipple = false;
+            this.siticoneRadioButton3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneRadioButton3.HoverCursor = System.Windows.Forms.Cursors.Hand;
+            this.siticoneRadioButton3.IsContained = false;
+            this.siticoneRadioButton3.IsReadOnly = false;
+            this.siticoneRadioButton3.Location = new System.Drawing.Point(36, 183);
+            this.siticoneRadioButton3.MinimumSize = new System.Drawing.Size(178, 32);
+            this.siticoneRadioButton3.Name = "siticoneRadioButton3";
+            this.siticoneRadioButton3.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.siticoneRadioButton3.RippleDuration = 0.5F;
+            this.siticoneRadioButton3.RippleStyle = SiticoneNetFrameworkUI.SiticoneRadioButton.RippleAnimationStyle.Standard;
+            this.siticoneRadioButton3.ShakeDuration = 0.5F;
+            this.siticoneRadioButton3.Size = new System.Drawing.Size(190, 32);
+            this.siticoneRadioButton3.TabIndex = 35;
+            this.siticoneRadioButton3.Text = "Cash";
+            this.siticoneRadioButton3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.siticoneRadioButton3.ToolTipText = "";
+            this.siticoneRadioButton3.UncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            // 
+            // siticoneRadioButton4
+            // 
+            this.siticoneRadioButton4.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
+            this.siticoneRadioButton4.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneRadioButton4.CanBeep = true;
+            this.siticoneRadioButton4.CanShake = true;
+            this.siticoneRadioButton4.Checked = false;
+            this.siticoneRadioButton4.CheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.siticoneRadioButton4.ContainerBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton4.ContainerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton4.ContainerBorderWidth = 1;
+            this.siticoneRadioButton4.ContainerBottomLeftRadius = 8;
+            this.siticoneRadioButton4.ContainerBottomRightRadius = 8;
+            this.siticoneRadioButton4.ContainerCheckedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton4.ContainerCheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton4.ContainerCheckedHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton4.ContainerCheckedPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(56)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.siticoneRadioButton4.ContainerHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton4.ContainerPadding = 8;
+            this.siticoneRadioButton4.ContainerPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.siticoneRadioButton4.ContainerTopLeftRadius = 8;
+            this.siticoneRadioButton4.ContainerTopRightRadius = 8;
+            this.siticoneRadioButton4.EnableRipple = false;
+            this.siticoneRadioButton4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneRadioButton4.HoverCursor = System.Windows.Forms.Cursors.Hand;
+            this.siticoneRadioButton4.IsContained = false;
+            this.siticoneRadioButton4.IsReadOnly = false;
+            this.siticoneRadioButton4.Location = new System.Drawing.Point(36, 256);
+            this.siticoneRadioButton4.MinimumSize = new System.Drawing.Size(178, 32);
+            this.siticoneRadioButton4.Name = "siticoneRadioButton4";
+            this.siticoneRadioButton4.RippleColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.siticoneRadioButton4.RippleDuration = 0.5F;
+            this.siticoneRadioButton4.RippleStyle = SiticoneNetFrameworkUI.SiticoneRadioButton.RippleAnimationStyle.Standard;
+            this.siticoneRadioButton4.ShakeDuration = 0.5F;
+            this.siticoneRadioButton4.Size = new System.Drawing.Size(271, 32);
+            this.siticoneRadioButton4.TabIndex = 36;
+            this.siticoneRadioButton4.Text = "Credit/Debit Card";
+            this.siticoneRadioButton4.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.siticoneRadioButton4.ToolTipText = "";
+            this.siticoneRadioButton4.UncheckedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            // 
+            // siticoneLabel3
+            // 
+            this.siticoneLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel3.Location = new System.Drawing.Point(922, 162);
+            this.siticoneLabel3.Name = "siticoneLabel3";
+            this.siticoneLabel3.Size = new System.Drawing.Size(199, 23);
+            this.siticoneLabel3.TabIndex = 31;
+            this.siticoneLabel3.Text = "Payment Methods";
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1607, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.siticoneLabel3);
+            this.Controls.Add(this.siticonePanel2);
+            this.Controls.Add(this.btnDiscard);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.lblGrandTotal);
+            this.Controls.Add(this.siticoneLabel2);
+            this.Controls.Add(this.dgvCart);
             this.Controls.Add(this.siticonePanel1);
             this.Name = "Cart";
             this.Text = "Cart";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Cart_Load);
             this.siticonePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
+            this.siticonePanel2.ResumeLayout(false);
+            this.siticonePanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -507,5 +985,21 @@
         private SiticoneNetFrameworkUI.SiticoneButton btnMenu;
         private SiticoneNetFrameworkUI.SiticoneButton btnInventory;
         private SiticoneNetFrameworkUI.SiticoneButton btnSales;
+        private System.Windows.Forms.DataGridView dgvCart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel2;
+        private SiticoneNetFrameworkUI.SiticoneLabel lblGrandTotal;
+        private SiticoneNetFrameworkUI.SiticoneButton btnPrint;
+        private SiticoneNetFrameworkUI.SiticoneButton btnDiscard;
+        private SiticoneNetFrameworkUI.SiticonePanel siticonePanel2;
+        private SiticoneNetFrameworkUI.SiticoneRadioButton siticoneRadioButton4;
+        private SiticoneNetFrameworkUI.SiticoneRadioButton siticoneRadioButton3;
+        private SiticoneNetFrameworkUI.SiticoneRadioButton siticoneRadioButton2;
+        private SiticoneNetFrameworkUI.SiticoneRadioButton siticoneRadioButton1;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel3;
     }
 }
