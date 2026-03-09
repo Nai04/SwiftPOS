@@ -76,7 +76,8 @@
         0F,
         0.5F,
         1F};
-            this.siticonePanel1.Location = new System.Drawing.Point(-35, -7);
+            this.siticonePanel1.Location = new System.Drawing.Point(-44, -9);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.PatternStyle = System.Drawing.Drawing2D.HatchStyle.LargeGrid;
             this.siticonePanel1.RippleAlpha = 50;
@@ -85,7 +86,7 @@
             this.siticonePanel1.RippleMaxSize = 600F;
             this.siticonePanel1.RippleSpeed = 15F;
             this.siticonePanel1.ShowBorder = true;
-            this.siticonePanel1.Size = new System.Drawing.Size(232, 1038);
+            this.siticonePanel1.Size = new System.Drawing.Size(290, 1298);
             this.siticonePanel1.TabIndex = 1;
             this.siticonePanel1.TabStop = true;
             this.siticonePanel1.TrackSystemTheme = false;
@@ -114,10 +115,10 @@
             this.btnCart.CanGlow = true;
             this.btnCart.CanShake = true;
             this.btnCart.ContextMenuStripEx = null;
-            this.btnCart.CornerRadiusBottomLeft = 19;
-            this.btnCart.CornerRadiusBottomRight = 19;
-            this.btnCart.CornerRadiusTopLeft = 19;
-            this.btnCart.CornerRadiusTopRight = 19;
+            this.btnCart.CornerRadiusBottomLeft = 24;
+            this.btnCart.CornerRadiusBottomRight = 24;
+            this.btnCart.CornerRadiusTopLeft = 24;
+            this.btnCart.CornerRadiusTopRight = 24;
             this.btnCart.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnCart.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnCart.EnableLongPress = false;
@@ -143,8 +144,9 @@
             this.btnCart.IsReadOnly = false;
             this.btnCart.IsToggleButton = false;
             this.btnCart.IsToggled = false;
-            this.btnCart.Location = new System.Drawing.Point(49, 242);
+            this.btnCart.Location = new System.Drawing.Point(61, 302);
             this.btnCart.LongPressDurationMS = 1000;
+            this.btnCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCart.Name = "btnCart";
             this.btnCart.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnCart.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -162,7 +164,7 @@
             this.btnCart.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnCart.ShakeDuration = 500;
             this.btnCart.ShakeIntensity = 5;
-            this.btnCart.Size = new System.Drawing.Size(154, 42);
+            this.btnCart.Size = new System.Drawing.Size(192, 52);
             this.btnCart.TabIndex = 14;
             this.btnCart.Text = "Cart";
             this.btnCart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,10 +194,10 @@
             this.btnLogout.CanGlow = true;
             this.btnLogout.CanShake = true;
             this.btnLogout.ContextMenuStripEx = null;
-            this.btnLogout.CornerRadiusBottomLeft = 19;
-            this.btnLogout.CornerRadiusBottomRight = 19;
-            this.btnLogout.CornerRadiusTopLeft = 19;
-            this.btnLogout.CornerRadiusTopRight = 19;
+            this.btnLogout.CornerRadiusBottomLeft = 24;
+            this.btnLogout.CornerRadiusBottomRight = 24;
+            this.btnLogout.CornerRadiusTopLeft = 24;
+            this.btnLogout.CornerRadiusTopRight = 24;
             this.btnLogout.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnLogout.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnLogout.EnableLongPress = false;
@@ -221,8 +223,9 @@
             this.btnLogout.IsReadOnly = false;
             this.btnLogout.IsToggleButton = false;
             this.btnLogout.IsToggled = false;
-            this.btnLogout.Location = new System.Drawing.Point(50, 462);
+            this.btnLogout.Location = new System.Drawing.Point(62, 578);
             this.btnLogout.LongPressDurationMS = 1000;
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnLogout.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -240,7 +243,7 @@
             this.btnLogout.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnLogout.ShakeDuration = 500;
             this.btnLogout.ShakeIntensity = 5;
-            this.btnLogout.Size = new System.Drawing.Size(154, 42);
+            this.btnLogout.Size = new System.Drawing.Size(192, 52);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Log out";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,9 +257,10 @@
             // 
             this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneLabel1.Font = new System.Drawing.Font("Times New Roman", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel1.Location = new System.Drawing.Point(70, 69);
+            this.siticoneLabel1.Location = new System.Drawing.Point(88, 86);
+            this.siticoneLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(119, 48);
+            this.siticoneLabel1.Size = new System.Drawing.Size(149, 60);
             this.siticoneLabel1.TabIndex = 3;
             this.siticoneLabel1.Text = "Cafero";
             // 
@@ -281,10 +285,10 @@
             this.btnMenu.CanShake = true;
             this.btnMenu.CenterTextAndBadgeTogether = false;
             this.btnMenu.ContextMenuStripEx = null;
-            this.btnMenu.CornerRadiusBottomLeft = 19;
-            this.btnMenu.CornerRadiusBottomRight = 19;
-            this.btnMenu.CornerRadiusTopLeft = 19;
-            this.btnMenu.CornerRadiusTopRight = 19;
+            this.btnMenu.CornerRadiusBottomLeft = 24;
+            this.btnMenu.CornerRadiusBottomRight = 24;
+            this.btnMenu.CornerRadiusTopLeft = 24;
+            this.btnMenu.CornerRadiusTopRight = 24;
             this.btnMenu.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnMenu.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnMenu.EnableLongPress = false;
@@ -310,8 +314,9 @@
             this.btnMenu.IsReadOnly = false;
             this.btnMenu.IsToggleButton = false;
             this.btnMenu.IsToggled = false;
-            this.btnMenu.Location = new System.Drawing.Point(50, 169);
+            this.btnMenu.Location = new System.Drawing.Point(62, 211);
             this.btnMenu.LongPressDurationMS = 1000;
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnMenu.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -329,7 +334,7 @@
             this.btnMenu.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnMenu.ShakeDuration = 500;
             this.btnMenu.ShakeIntensity = 5;
-            this.btnMenu.Size = new System.Drawing.Size(154, 42);
+            this.btnMenu.Size = new System.Drawing.Size(192, 52);
             this.btnMenu.TabIndex = 2;
             this.btnMenu.Text = "Menu";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -358,10 +363,10 @@
             this.btnInventory.CanGlow = true;
             this.btnInventory.CanShake = true;
             this.btnInventory.ContextMenuStripEx = null;
-            this.btnInventory.CornerRadiusBottomLeft = 19;
-            this.btnInventory.CornerRadiusBottomRight = 19;
-            this.btnInventory.CornerRadiusTopLeft = 19;
-            this.btnInventory.CornerRadiusTopRight = 19;
+            this.btnInventory.CornerRadiusBottomLeft = 24;
+            this.btnInventory.CornerRadiusBottomRight = 24;
+            this.btnInventory.CornerRadiusTopLeft = 24;
+            this.btnInventory.CornerRadiusTopRight = 24;
             this.btnInventory.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnInventory.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnInventory.EnableLongPress = false;
@@ -387,8 +392,9 @@
             this.btnInventory.IsReadOnly = false;
             this.btnInventory.IsToggleButton = false;
             this.btnInventory.IsToggled = false;
-            this.btnInventory.Location = new System.Drawing.Point(50, 315);
+            this.btnInventory.Location = new System.Drawing.Point(62, 394);
             this.btnInventory.LongPressDurationMS = 1000;
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnInventory.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -406,7 +412,7 @@
             this.btnInventory.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnInventory.ShakeDuration = 500;
             this.btnInventory.ShakeIntensity = 5;
-            this.btnInventory.Size = new System.Drawing.Size(154, 42);
+            this.btnInventory.Size = new System.Drawing.Size(192, 52);
             this.btnInventory.TabIndex = 1;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -414,6 +420,7 @@
             this.btnInventory.TooltipText = null;
             this.btnInventory.UseAdvancedRendering = true;
             this.btnInventory.UseParticles = false;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click_1);
             // 
             // btnSales
             // 
@@ -435,10 +442,10 @@
             this.btnSales.CanGlow = true;
             this.btnSales.CanShake = true;
             this.btnSales.ContextMenuStripEx = null;
-            this.btnSales.CornerRadiusBottomLeft = 19;
-            this.btnSales.CornerRadiusBottomRight = 19;
-            this.btnSales.CornerRadiusTopLeft = 19;
-            this.btnSales.CornerRadiusTopRight = 19;
+            this.btnSales.CornerRadiusBottomLeft = 24;
+            this.btnSales.CornerRadiusBottomRight = 24;
+            this.btnSales.CornerRadiusTopLeft = 24;
+            this.btnSales.CornerRadiusTopRight = 24;
             this.btnSales.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnSales.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnSales.EnableLongPress = false;
@@ -464,8 +471,9 @@
             this.btnSales.IsReadOnly = false;
             this.btnSales.IsToggleButton = false;
             this.btnSales.IsToggled = false;
-            this.btnSales.Location = new System.Drawing.Point(50, 387);
+            this.btnSales.Location = new System.Drawing.Point(62, 484);
             this.btnSales.LongPressDurationMS = 1000;
+            this.btnSales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSales.Name = "btnSales";
             this.btnSales.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnSales.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -483,7 +491,7 @@
             this.btnSales.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnSales.ShakeDuration = 500;
             this.btnSales.ShakeIntensity = 5;
-            this.btnSales.Size = new System.Drawing.Size(154, 42);
+            this.btnSales.Size = new System.Drawing.Size(192, 52);
             this.btnSales.TabIndex = 0;
             this.btnSales.Text = "Analytics";
             this.btnSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -513,10 +521,10 @@
             this.btnCoffee.CanGlow = true;
             this.btnCoffee.CanShake = true;
             this.btnCoffee.ContextMenuStripEx = null;
-            this.btnCoffee.CornerRadiusBottomLeft = 23;
-            this.btnCoffee.CornerRadiusBottomRight = 23;
-            this.btnCoffee.CornerRadiusTopLeft = 23;
-            this.btnCoffee.CornerRadiusTopRight = 23;
+            this.btnCoffee.CornerRadiusBottomLeft = 29;
+            this.btnCoffee.CornerRadiusBottomRight = 29;
+            this.btnCoffee.CornerRadiusTopLeft = 29;
+            this.btnCoffee.CornerRadiusTopRight = 29;
             this.btnCoffee.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnCoffee.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnCoffee.EnableLongPress = false;
@@ -542,8 +550,9 @@
             this.btnCoffee.IsReadOnly = false;
             this.btnCoffee.IsToggleButton = false;
             this.btnCoffee.IsToggled = false;
-            this.btnCoffee.Location = new System.Drawing.Point(228, 60);
+            this.btnCoffee.Location = new System.Drawing.Point(285, 75);
             this.btnCoffee.LongPressDurationMS = 1000;
+            this.btnCoffee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCoffee.Name = "btnCoffee";
             this.btnCoffee.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnCoffee.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -560,7 +569,7 @@
             this.btnCoffee.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnCoffee.ShakeDuration = 500;
             this.btnCoffee.ShakeIntensity = 5;
-            this.btnCoffee.Size = new System.Drawing.Size(190, 50);
+            this.btnCoffee.Size = new System.Drawing.Size(238, 62);
             this.btnCoffee.TabIndex = 2;
             this.btnCoffee.Text = "COFFEE";
             this.btnCoffee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -590,10 +599,10 @@
             this.btnMilktea.CanGlow = true;
             this.btnMilktea.CanShake = true;
             this.btnMilktea.ContextMenuStripEx = null;
-            this.btnMilktea.CornerRadiusBottomLeft = 23;
-            this.btnMilktea.CornerRadiusBottomRight = 23;
-            this.btnMilktea.CornerRadiusTopLeft = 23;
-            this.btnMilktea.CornerRadiusTopRight = 23;
+            this.btnMilktea.CornerRadiusBottomLeft = 29;
+            this.btnMilktea.CornerRadiusBottomRight = 29;
+            this.btnMilktea.CornerRadiusTopLeft = 29;
+            this.btnMilktea.CornerRadiusTopRight = 29;
             this.btnMilktea.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnMilktea.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnMilktea.EnableLongPress = false;
@@ -619,8 +628,9 @@
             this.btnMilktea.IsReadOnly = false;
             this.btnMilktea.IsToggleButton = false;
             this.btnMilktea.IsToggled = false;
-            this.btnMilktea.Location = new System.Drawing.Point(510, 60);
+            this.btnMilktea.Location = new System.Drawing.Point(638, 75);
             this.btnMilktea.LongPressDurationMS = 1000;
+            this.btnMilktea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMilktea.Name = "btnMilktea";
             this.btnMilktea.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnMilktea.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -637,7 +647,7 @@
             this.btnMilktea.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnMilktea.ShakeDuration = 500;
             this.btnMilktea.ShakeIntensity = 5;
-            this.btnMilktea.Size = new System.Drawing.Size(190, 50);
+            this.btnMilktea.Size = new System.Drawing.Size(238, 62);
             this.btnMilktea.TabIndex = 8;
             this.btnMilktea.Text = "MILKTEA";
             this.btnMilktea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -667,10 +677,10 @@
             this.btnFruitTea.CanGlow = true;
             this.btnFruitTea.CanShake = true;
             this.btnFruitTea.ContextMenuStripEx = null;
-            this.btnFruitTea.CornerRadiusBottomLeft = 23;
-            this.btnFruitTea.CornerRadiusBottomRight = 23;
-            this.btnFruitTea.CornerRadiusTopLeft = 23;
-            this.btnFruitTea.CornerRadiusTopRight = 23;
+            this.btnFruitTea.CornerRadiusBottomLeft = 29;
+            this.btnFruitTea.CornerRadiusBottomRight = 29;
+            this.btnFruitTea.CornerRadiusTopLeft = 29;
+            this.btnFruitTea.CornerRadiusTopRight = 29;
             this.btnFruitTea.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnFruitTea.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnFruitTea.EnableLongPress = false;
@@ -696,8 +706,9 @@
             this.btnFruitTea.IsReadOnly = false;
             this.btnFruitTea.IsToggleButton = false;
             this.btnFruitTea.IsToggled = false;
-            this.btnFruitTea.Location = new System.Drawing.Point(790, 62);
+            this.btnFruitTea.Location = new System.Drawing.Point(988, 78);
             this.btnFruitTea.LongPressDurationMS = 1000;
+            this.btnFruitTea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFruitTea.Name = "btnFruitTea";
             this.btnFruitTea.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnFruitTea.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -714,7 +725,7 @@
             this.btnFruitTea.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnFruitTea.ShakeDuration = 500;
             this.btnFruitTea.ShakeIntensity = 5;
-            this.btnFruitTea.Size = new System.Drawing.Size(190, 50);
+            this.btnFruitTea.Size = new System.Drawing.Size(238, 62);
             this.btnFruitTea.TabIndex = 9;
             this.btnFruitTea.Text = "FRUIT TEA";
             this.btnFruitTea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -744,10 +755,10 @@
             this.btnRiceMeal.CanGlow = true;
             this.btnRiceMeal.CanShake = true;
             this.btnRiceMeal.ContextMenuStripEx = null;
-            this.btnRiceMeal.CornerRadiusBottomLeft = 23;
-            this.btnRiceMeal.CornerRadiusBottomRight = 23;
-            this.btnRiceMeal.CornerRadiusTopLeft = 23;
-            this.btnRiceMeal.CornerRadiusTopRight = 23;
+            this.btnRiceMeal.CornerRadiusBottomLeft = 29;
+            this.btnRiceMeal.CornerRadiusBottomRight = 29;
+            this.btnRiceMeal.CornerRadiusTopLeft = 29;
+            this.btnRiceMeal.CornerRadiusTopRight = 29;
             this.btnRiceMeal.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnRiceMeal.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnRiceMeal.EnableLongPress = false;
@@ -773,8 +784,9 @@
             this.btnRiceMeal.IsReadOnly = false;
             this.btnRiceMeal.IsToggleButton = false;
             this.btnRiceMeal.IsToggled = false;
-            this.btnRiceMeal.Location = new System.Drawing.Point(1073, 62);
+            this.btnRiceMeal.Location = new System.Drawing.Point(1341, 78);
             this.btnRiceMeal.LongPressDurationMS = 1000;
+            this.btnRiceMeal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRiceMeal.Name = "btnRiceMeal";
             this.btnRiceMeal.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnRiceMeal.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -791,7 +803,7 @@
             this.btnRiceMeal.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnRiceMeal.ShakeDuration = 500;
             this.btnRiceMeal.ShakeIntensity = 5;
-            this.btnRiceMeal.Size = new System.Drawing.Size(190, 50);
+            this.btnRiceMeal.Size = new System.Drawing.Size(238, 62);
             this.btnRiceMeal.TabIndex = 10;
             this.btnRiceMeal.Text = "RICE MEAL";
             this.btnRiceMeal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -821,10 +833,10 @@
             this.btnPastry.CanGlow = true;
             this.btnPastry.CanShake = true;
             this.btnPastry.ContextMenuStripEx = null;
-            this.btnPastry.CornerRadiusBottomLeft = 23;
-            this.btnPastry.CornerRadiusBottomRight = 23;
-            this.btnPastry.CornerRadiusTopLeft = 23;
-            this.btnPastry.CornerRadiusTopRight = 23;
+            this.btnPastry.CornerRadiusBottomLeft = 29;
+            this.btnPastry.CornerRadiusBottomRight = 29;
+            this.btnPastry.CornerRadiusTopLeft = 29;
+            this.btnPastry.CornerRadiusTopRight = 29;
             this.btnPastry.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnPastry.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnPastry.EnableLongPress = false;
@@ -850,8 +862,9 @@
             this.btnPastry.IsReadOnly = false;
             this.btnPastry.IsToggleButton = false;
             this.btnPastry.IsToggled = false;
-            this.btnPastry.Location = new System.Drawing.Point(1364, 62);
+            this.btnPastry.Location = new System.Drawing.Point(1705, 78);
             this.btnPastry.LongPressDurationMS = 1000;
+            this.btnPastry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPastry.Name = "btnPastry";
             this.btnPastry.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnPastry.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -868,7 +881,7 @@
             this.btnPastry.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnPastry.ShakeDuration = 500;
             this.btnPastry.ShakeIntensity = 5;
-            this.btnPastry.Size = new System.Drawing.Size(190, 50);
+            this.btnPastry.Size = new System.Drawing.Size(238, 62);
             this.btnPastry.TabIndex = 11;
             this.btnPastry.Text = "PASTRY";
             this.btnPastry.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -898,10 +911,10 @@
             this.btnSnacksPasta.CanGlow = true;
             this.btnSnacksPasta.CanShake = true;
             this.btnSnacksPasta.ContextMenuStripEx = null;
-            this.btnSnacksPasta.CornerRadiusBottomLeft = 23;
-            this.btnSnacksPasta.CornerRadiusBottomRight = 23;
-            this.btnSnacksPasta.CornerRadiusTopLeft = 23;
-            this.btnSnacksPasta.CornerRadiusTopRight = 23;
+            this.btnSnacksPasta.CornerRadiusBottomLeft = 29;
+            this.btnSnacksPasta.CornerRadiusBottomRight = 29;
+            this.btnSnacksPasta.CornerRadiusTopLeft = 29;
+            this.btnSnacksPasta.CornerRadiusTopRight = 29;
             this.btnSnacksPasta.CustomCursor = System.Windows.Forms.Cursors.Default;
             this.btnSnacksPasta.DisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.btnSnacksPasta.EnableLongPress = false;
@@ -927,8 +940,9 @@
             this.btnSnacksPasta.IsReadOnly = false;
             this.btnSnacksPasta.IsToggleButton = false;
             this.btnSnacksPasta.IsToggled = false;
-            this.btnSnacksPasta.Location = new System.Drawing.Point(1657, 60);
+            this.btnSnacksPasta.Location = new System.Drawing.Point(2071, 75);
             this.btnSnacksPasta.LongPressDurationMS = 1000;
+            this.btnSnacksPasta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSnacksPasta.Name = "btnSnacksPasta";
             this.btnSnacksPasta.NormalFontStyle = System.Drawing.FontStyle.Regular;
             this.btnSnacksPasta.ParticleColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
@@ -945,7 +959,7 @@
             this.btnSnacksPasta.ShadowOffset = new System.Drawing.Point(0, 2);
             this.btnSnacksPasta.ShakeDuration = 500;
             this.btnSnacksPasta.ShakeIntensity = 5;
-            this.btnSnacksPasta.Size = new System.Drawing.Size(190, 50);
+            this.btnSnacksPasta.Size = new System.Drawing.Size(238, 62);
             this.btnSnacksPasta.TabIndex = 12;
             this.btnSnacksPasta.Text = "SNACKS AND PASTA";
             this.btnSnacksPasta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -956,10 +970,10 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.btnSnacksPasta);
             this.Controls.Add(this.btnPastry);
             this.Controls.Add(this.btnRiceMeal);
@@ -969,6 +983,7 @@
             this.Controls.Add(this.siticonePanel1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Menu";
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

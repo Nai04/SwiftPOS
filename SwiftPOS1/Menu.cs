@@ -86,6 +86,14 @@ namespace SwiftPOS1
             pastry.Show();
             this.Hide();
         }
+
+
+        private void btnInventory_Click_1(object sender, EventArgs e)
+        {
+            Inventory inventory = new Inventory();
+            inventory.Show();
+            this.Hide();
+        }
     }
 
 
