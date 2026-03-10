@@ -51,6 +51,9 @@
             this.btnInvDelete = new SiticoneNetFrameworkUI.SiticoneButton();
             this.btnInvUpdate = new SiticoneNetFrameworkUI.SiticoneButton();
             this.InvDataGridView = new System.Windows.Forms.DataGridView();
+            this.InvSize = new System.Windows.Forms.ComboBox();
+            this.siticoneLabel8 = new SiticoneNetFrameworkUI.SiticoneLabel();
+            this.InvSearch = new SiticoneNetFrameworkUI.SiticoneTextBox();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InvDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -741,7 +744,7 @@
             this.InvQuantity.ShadowAnimationDuration = 1;
             this.InvQuantity.ShadowBlur = 10;
             this.InvQuantity.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.InvQuantity.Size = new System.Drawing.Size(250, 40);
+            this.InvQuantity.Size = new System.Drawing.Size(209, 40);
             this.InvQuantity.SolidBorderColor = System.Drawing.Color.LightSlateGray;
             this.InvQuantity.SolidBorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.InvQuantity.SolidBorderHoverColor = System.Drawing.Color.Gray;
@@ -1044,14 +1047,89 @@
             this.InvDataGridView.Name = "InvDataGridView";
             this.InvDataGridView.RowHeadersWidth = 51;
             this.InvDataGridView.RowTemplate.Height = 24;
-            this.InvDataGridView.Size = new System.Drawing.Size(692, 551);
+            this.InvDataGridView.Size = new System.Drawing.Size(904, 551);
             this.InvDataGridView.TabIndex = 20;
+            // 
+            // InvSize
+            // 
+            this.InvSize.FormattingEnabled = true;
+            this.InvSize.Location = new System.Drawing.Point(524, 434);
+            this.InvSize.Name = "InvSize";
+            this.InvSize.Size = new System.Drawing.Size(36, 24);
+            this.InvSize.TabIndex = 21;
+            // 
+            // siticoneLabel8
+            // 
+            this.siticoneLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.siticoneLabel8.Location = new System.Drawing.Point(1213, 30);
+            this.siticoneLabel8.Name = "siticoneLabel8";
+            this.siticoneLabel8.Size = new System.Drawing.Size(100, 23);
+            this.siticoneLabel8.TabIndex = 22;
+            this.siticoneLabel8.Text = "Search:";
+            // 
+            // InvSearch
+            // 
+            this.InvSearch.AccessibleDescription = "A customizable text input field.";
+            this.InvSearch.AccessibleName = "Text Box";
+            this.InvSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.InvSearch.BackColor = System.Drawing.Color.Transparent;
+            this.InvSearch.BlinkCount = 3;
+            this.InvSearch.BlinkShadow = false;
+            this.InvSearch.BorderColor1 = System.Drawing.Color.LightSlateGray;
+            this.InvSearch.BorderColor2 = System.Drawing.Color.LightSlateGray;
+            this.InvSearch.BorderFocusColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.InvSearch.BorderFocusColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.InvSearch.CanShake = true;
+            this.InvSearch.ContinuousBlink = false;
+            this.InvSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.InvSearch.CursorBlinkRate = 500;
+            this.InvSearch.CursorColor = System.Drawing.Color.Black;
+            this.InvSearch.CursorHeight = 26;
+            this.InvSearch.CursorOffset = 0;
+            this.InvSearch.CursorStyle = SiticoneNetFrameworkUI.Helpers.DrawingStyle.SiticoneDrawingStyle.Solid;
+            this.InvSearch.CursorWidth = 1;
+            this.InvSearch.DisabledBackColor = System.Drawing.Color.WhiteSmoke;
+            this.InvSearch.DisabledBorderColor = System.Drawing.Color.LightGray;
+            this.InvSearch.DisabledTextColor = System.Drawing.Color.Gray;
+            this.InvSearch.EnableDropShadow = false;
+            this.InvSearch.FillColor1 = System.Drawing.Color.White;
+            this.InvSearch.FillColor2 = System.Drawing.Color.White;
+            this.InvSearch.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.InvSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.InvSearch.HoverBorderColor1 = System.Drawing.Color.Gray;
+            this.InvSearch.HoverBorderColor2 = System.Drawing.Color.Gray;
+            this.InvSearch.IsEnabled = true;
+            this.InvSearch.Location = new System.Drawing.Point(1288, 30);
+            this.InvSearch.Name = "InvSearch";
+            this.InvSearch.PlaceholderColor = System.Drawing.Color.Gray;
+            this.InvSearch.ReadOnlyBorderColor1 = System.Drawing.Color.LightGray;
+            this.InvSearch.ReadOnlyBorderColor2 = System.Drawing.Color.LightGray;
+            this.InvSearch.ReadOnlyFillColor1 = System.Drawing.Color.WhiteSmoke;
+            this.InvSearch.ReadOnlyFillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.InvSearch.ReadOnlyPlaceholderColor = System.Drawing.Color.DarkGray;
+            this.InvSearch.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.InvSearch.ShadowAnimationDuration = 1;
+            this.InvSearch.ShadowBlur = 10;
+            this.InvSearch.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.InvSearch.Size = new System.Drawing.Size(250, 40);
+            this.InvSearch.SolidBorderColor = System.Drawing.Color.LightSlateGray;
+            this.InvSearch.SolidBorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.InvSearch.SolidBorderHoverColor = System.Drawing.Color.Gray;
+            this.InvSearch.SolidFillColor = System.Drawing.Color.White;
+            this.InvSearch.TabIndex = 23;
+            this.InvSearch.TextPadding = new System.Windows.Forms.Padding(16, 0, 6, 0);
+            this.InvSearch.ValidationErrorMessage = "Invalid input.";
+            this.InvSearch.ValidationFunction = null;
             // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.InvSearch);
+            this.Controls.Add(this.siticoneLabel8);
+            this.Controls.Add(this.InvSize);
             this.Controls.Add(this.InvDataGridView);
             this.Controls.Add(this.btnInvUpdate);
             this.Controls.Add(this.btnInvDelete);
@@ -1103,5 +1181,8 @@
         private SiticoneNetFrameworkUI.SiticoneButton btnInvDelete;
         private SiticoneNetFrameworkUI.SiticoneButton btnInvUpdate;
         private System.Windows.Forms.DataGridView InvDataGridView;
+        private System.Windows.Forms.ComboBox InvSize;
+        private SiticoneNetFrameworkUI.SiticoneLabel siticoneLabel8;
+        private SiticoneNetFrameworkUI.SiticoneTextBox InvSearch;
     }
 }
