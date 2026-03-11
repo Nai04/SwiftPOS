@@ -215,6 +215,8 @@ namespace SwiftPOS1
             inventoryTable.Columns.Add("Quantity", typeof(int));
             inventoryTable.Columns.Add("Purchase Price", typeof(decimal));
             inventoryTable.Columns.Add("Stock", typeof(int));
+            inventoryTable.Columns.Add("Acquired Date", typeof(DateTime));
+            inventoryTable.Columns.Add("Expiry Date", typeof(DateTime));
 
             inventoryView = new DataView(inventoryTable);
 
@@ -352,6 +354,8 @@ namespace SwiftPOS1
             row["Quantity"] = quantity;
             row["Purchase Price"] = price;
             row["Stock"] = stock;
+            row["Acquired Date"] = InvAcquiredDate.Value;
+            row["Expiry Date"] = InvExpiryDate.Value;
 
             inventoryTable.Rows.Add(row);
 
@@ -413,6 +417,8 @@ namespace SwiftPOS1
                 inventoryTable.Rows[selectedRowIndex]["Quantity"] = quantity;
                 inventoryTable.Rows[selectedRowIndex]["Purchase Price"] = price;
                 inventoryTable.Rows[selectedRowIndex]["Stock"] = stock;
+                inventoryTable.Rows[selectedRowIndex]["Acquired Date"] = InvAcquiredDate.Value;
+                inventoryTable.Rows[selectedRowIndex]["Expiry Date"] = InvExpiryDate.Value;
 
                 MessageBox.Show("Item updated successfully.");
 
@@ -437,6 +443,8 @@ namespace SwiftPOS1
                 InvQuantity.Text = InvDataGridView.Rows[e.RowIndex].Cells[3].Value?.ToString();
                 InvPrice.Text = InvDataGridView.Rows[e.RowIndex].Cells[4].Value?.ToString();
                 InvStock.Text = InvDataGridView.Rows[e.RowIndex].Cells[5].Value?.ToString();
+                InvAcquiredDate.Value = Convert.ToDateTime(InvDataGridView.Rows[e.RowIndex].Cells[6].Value);
+                InvExpiryDate.Value = Convert.ToDateTime(InvDataGridView.Rows[e.RowIndex].Cells[7].Value);
             }
         }
 
@@ -449,6 +457,8 @@ namespace SwiftPOS1
             InvQuantity.Clear();
             InvPrice.Clear();
             InvStock.Clear();
+            InvAcquiredDate.Value = DateTime.Now;
+            InvExpiryDate.Value = DateTime.Now;
         }
 
         private void Inventory_Load(object sender, EventArgs e)
@@ -480,6 +490,11 @@ namespace SwiftPOS1
         private void InvSearch_TextChanged(object sender, EventArgs e)
         {
             ApplySearchFilter();
+        }
+
+        private void siticoneLabel4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
