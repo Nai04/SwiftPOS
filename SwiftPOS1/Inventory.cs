@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace SwiftPOS1
@@ -193,6 +194,7 @@ namespace SwiftPOS1
             InvCategory.SelectedIndexChanged += InvCategory_SelectedIndexChanged;
             InvItemName.SelectedIndexChanged += InvItemName_SelectedIndexChanged;
             InvDataGridView.CellClick += InvDataGridView_CellClick;
+            InvSearch.TextChanged += InvSearch_TextChanged;
         }
 
         private void LoadCategories()
@@ -210,13 +212,15 @@ namespace SwiftPOS1
             inventoryTable.Columns.Add("Item ID");
             inventoryTable.Columns.Add("Item Name");
             inventoryTable.Columns.Add("Category");
-            inventoryTable.Columns.Add("Quantity");
-            inventoryTable.Columns.Add("Purchase Price");
-            inventoryTable.Columns.Add("Stock");
+            inventoryTable.Columns.Add("Quantity", typeof(int));
+            inventoryTable.Columns.Add("Purchase Price", typeof(decimal));
+            inventoryTable.Columns.Add("Stock", typeof(int));
+
+            inventoryView = new DataView(inventoryTable);
 
             InvDataGridView.Columns.Clear();
             InvDataGridView.AutoGenerateColumns = true;
-            InvDataGridView.DataSource = inventoryTable;
+            InvDataGridView.DataSource = inventoryView;
         }
 
         private string GetItemKey()
@@ -299,6 +303,28 @@ namespace SwiftPOS1
                 return;
             }
 
+            int quantity;
+            decimal price;
+            int stock;
+
+            if (!int.TryParse(InvQuantity.Text, out quantity))
+            {
+                MessageBox.Show("Quantity must be a number.");
+                return;
+            }
+
+            if (!decimal.TryParse(InvPrice.Text, out price))
+            {
+                MessageBox.Show("Purchase Price must be a number.");
+                return;
+            }
+
+            if (!int.TryParse(InvStock.Text, out stock))
+            {
+                MessageBox.Show("Stock must be a number.");
+                return;
+            }
+
             string itemKey = GetItemKey();
 
             if (ItemAlreadyExists(itemKey))
@@ -323,9 +349,9 @@ namespace SwiftPOS1
             row["Item ID"] = itemID;
             row["Item Name"] = InvItemName.Text;
             row["Category"] = InvCategory.Text;
-            row["Quantity"] = InvQuantity.Text;
-            row["Purchase Price"] = InvPrice.Text;
-            row["Stock"] = InvStock.Text;
+            row["Quantity"] = quantity;
+            row["Purchase Price"] = price;
+            row["Stock"] = stock;
 
             inventoryTable.Rows.Add(row);
 
@@ -360,11 +386,33 @@ namespace SwiftPOS1
         {
             if (selectedRowIndex >= 0 && selectedRowIndex < inventoryTable.Rows.Count)
             {
+                int quantity;
+                decimal price;
+                int stock;
+
+                if (!int.TryParse(InvQuantity.Text, out quantity))
+                {
+                    MessageBox.Show("Quantity must be a number.");
+                    return;
+                }
+
+                if (!decimal.TryParse(InvPrice.Text, out price))
+                {
+                    MessageBox.Show("Purchase Price must be a number.");
+                    return;
+                }
+
+                if (!int.TryParse(InvStock.Text, out stock))
+                {
+                    MessageBox.Show("Stock must be a number.");
+                    return;
+                }
+
                 inventoryTable.Rows[selectedRowIndex]["Item Name"] = InvItemName.Text;
                 inventoryTable.Rows[selectedRowIndex]["Category"] = InvCategory.Text;
-                inventoryTable.Rows[selectedRowIndex]["Quantity"] = InvQuantity.Text;
-                inventoryTable.Rows[selectedRowIndex]["Purchase Price"] = InvPrice.Text;
-                inventoryTable.Rows[selectedRowIndex]["Stock"] = InvStock.Text;
+                inventoryTable.Rows[selectedRowIndex]["Quantity"] = quantity;
+                inventoryTable.Rows[selectedRowIndex]["Purchase Price"] = price;
+                inventoryTable.Rows[selectedRowIndex]["Stock"] = stock;
 
                 MessageBox.Show("Item updated successfully.");
 
@@ -409,6 +457,29 @@ namespace SwiftPOS1
 
         private void InvStock_Click(object sender, EventArgs e)
         {
+        }
+
+        private DataView inventoryView;
+
+        private void ApplySearchFilter()
+        {
+            string keyword = InvSearch.Text.Trim().Replace("'", "''");
+
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                inventoryView.RowFilter = "";
+            }
+            else
+            {
+                inventoryView.RowFilter =
+                    $"Convert([Item ID], 'System.String') LIKE '%{keyword}%' OR " +
+                    $"[Item Name] LIKE '%{keyword}%' OR " +
+                    $"Category LIKE '%{keyword}%'";
+            }
+        }
+        private void InvSearch_TextChanged(object sender, EventArgs e)
+        {
+            ApplySearchFilter();
         }
     }
 }
